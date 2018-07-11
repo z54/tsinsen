@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="http://www.tsinsen.com/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+
+<title>公共题库第1卷 - Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"36842","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="www_tsinsen_default.html" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="www_tsinsen_default.html">首页</a>
+ <div class="drop">
+  <div class=t><a href='www_tsinsen_default.html' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='ProblemArchive.htm' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='ASelect.htm'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="AllSubmits.htm">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='AllSubmits.htm' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='AssignManage.htm'>作业管理</a></div>
+  <div class=t><a href='MyAssignment.htm'>我的作业</a></div>
+  <div class=t><a href='Problemlist.htm'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DiskView.htm'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='AUsers.htm'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DomainChange.htm'>课程切换</a></div>
+  <div class=t><a href='http://www.tsinsen.com/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='http://www.tsinsen.com/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='ProblemManage.htm'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ChangePwd.htm'>修改密码</a></div>
+  <div class=t><a href='MyMessages.htm'>我的消息</a></div>
+  <div class=t req="admin"><a href='SendMessage.htm'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ProblemArchive.html###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='UserManage.htm'>用户管理</a></div>
+  <div class=t><a href='ProblemAdmin.htm'>试题管理</a></div>
+  <div class=t><a href='rejudge.htm'>试题复评</a></div>
+  <div class=t><a href='ChangeUPwd.htm'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='resources.htm'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="help.htm">帮助</a>
+ <div class="drop">
+  <div class=t><a href='help.htm' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='updates.htm' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="FindPassword.htm">忘记密码</a> &nbsp;
+其他登录：<a href="ProblemArchive.html###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="ProblemArchive.html###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="ProblemArchive.html###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<h2>公共题库第1卷</h2>
+<div style="text-align:center">
+<div id="volList" style="margin-bottom:30px; font-size:16px; font-family:'微软雅黑', '黑体', '隶书', '宋体';">
+<div style="display:none; ">
+<a href="http://www.tsinsen.com/ProblemArchive.page?page=1">清橙公共题库第1卷</a>
+<a href="ProblemArchive_3.htm">清橙公共题库第2卷</a>
+<a href="ProblemArchive_4.htm">清橙公共题库第3卷</a>
+<a href="ProblemArchive_5.htm">清橙公共题库第4卷</a>
+<a href="ProblemArchive_8.htm">清橙公共题库第5卷</a>
+<a href="ProblemArchive_6.htm">清橙公共题库第6卷</a>
+<a href="ProblemArchive_7.htm">清橙公共题库第7卷</a>
+<a href="ProblemArchive_9.htm">清橙公共题库第8卷</a>
+<a href="ProblemArchive_10.htm">清橙公共题库第9卷</a>
+<a href="ProblemArchive_12.htm">清橙公共题库第10卷</a>
+<a href="ProblemArchive_11.htm">清橙公共题库第11卷</a>
+</div>
+</div>
+<div id="prblist" style="font-family:'宋体', '新宋体'; text-align:center; margin-left:auto; margin-right:auto; ">
+<center>
+<table class="plaint"><thead><tr><th style="width: 64px; ">试题编号</th><th style="width: 250px; text-align:left; ">试题名称</th><th style="width: 260px; text-align:left; ">试题来源</th><th style="width: 180px; ">通过率</th><th style="width: 52px; ">我的得分</th></tr></thead><tbody>
+
+<tr><td>1000</td><td style="text-align:left;"><a href="A1000.htm">A+B Problem</a></td><td style="text-align:left;"></td><td>16767/30849 (平均分：55.81)</td><td></td></tr> 
+<tr><td>1001</td><td style="text-align:left;"><a href="A1001.htm">01序列</a></td><td style="text-align:left;"></td><td>7758/12011 (平均分：64.59)</td><td></td></tr> 
+<tr><td>1002</td><td style="text-align:left;"><a href="A1002.htm">01序列2</a></td><td style="text-align:left;"></td><td>6158/8575 (平均分：71.81)</td><td></td></tr> 
+<tr><td>1003</td><td style="text-align:left;"><a href="A1003.htm">画长方形1</a></td><td style="text-align:left;"></td><td>4903/10279 (平均分：47.70)</td><td></td></tr> 
+<tr><td>1004</td><td style="text-align:left;"><a href="A1004.htm">画长方形2</a></td><td style="text-align:left;"></td><td>4375/6750 (平均分：73.97)</td><td></td></tr> 
+<tr><td>1005</td><td style="text-align:left;"><a href="A1005.htm">特殊的数字1</a></td><td style="text-align:left;"></td><td>6560/10259 (平均分：63.94)</td><td></td></tr> 
+<tr><td>1006</td><td style="text-align:left;"><a href="A1006.htm">特殊的数字2</a></td><td style="text-align:left;"></td><td>5622/7782 (平均分：72.24)</td><td></td></tr> 
+<tr><td>1007</td><td style="text-align:left;"><a href="A1007.htm">特殊的数字3</a></td><td style="text-align:left;"></td><td>4710/9599 (平均分：60.28)</td><td></td></tr> 
+<tr><td>1008</td><td style="text-align:left;"><a href="A1008.htm">数列特征</a></td><td style="text-align:left;"></td><td>4783/10295 (平均分：60.55)</td><td></td></tr> 
+<tr><td>1009</td><td style="text-align:left;"><a href="A1009.htm">数列特征2</a></td><td style="text-align:left;"></td><td>3897/9232 (平均分：59.32)</td><td></td></tr> 
+<tr><td>1010</td><td style="text-align:left;"><a href="A1010.htm">进制转换1</a></td><td style="text-align:left;"></td><td>4098/6868 (平均分：72.49)</td><td></td></tr> 
+<tr><td>1011</td><td style="text-align:left;"><a href="A1011.htm">进制转换2</a></td><td style="text-align:left;"></td><td>3484/8066 (平均分：72.65)</td><td></td></tr> 
+<tr><td>1012</td><td style="text-align:left;"><a href="A1012.htm">进制转换3</a></td><td style="text-align:left;"></td><td>3207/6272 (平均分：74.90)</td><td></td></tr> 
+<tr><td>1013</td><td style="text-align:left;"><a href="A1013.htm">进制转换4</a></td><td style="text-align:left;"></td><td>2471/8651 (平均分：61.52)</td><td></td></tr> 
+<tr><td>1014</td><td style="text-align:left;"><a href="A1014.htm">进制转换5</a></td><td style="text-align:left;"></td><td>1770/10915 (平均分：16.22)</td><td></td></tr> 
+<tr><td>1015</td><td style="text-align:left;"><a href="A1015.htm">杨辉三角形</a></td><td style="text-align:left;"></td><td>4168/8899 (平均分：53.84)</td><td></td></tr> 
+<tr><td>1016</td><td style="text-align:left;"><a href="A1016.htm">缩小的陆地</a></td><td style="text-align:left;"></td><td>3118/6656 (平均分：58.06)</td><td></td></tr> 
+<tr><td>1017</td><td style="text-align:left;"><a href="A1017.htm">计算价格</a></td><td style="text-align:left;"></td><td>6127/9592 (平均分：65.01)</td><td></td></tr> 
+<tr><td>1018</td><td style="text-align:left;"><a href="A1018.htm">查找整数</a></td><td style="text-align:left;"></td><td>4042/8338 (平均分：66.98)</td><td></td></tr> 
+<tr><td>1019</td><td style="text-align:left;"><a href="A1019.htm">枚举字串</a></td><td style="text-align:left;"></td><td>3012/3780 (平均分：79.68)</td><td></td></tr> 
+<tr><td>1020</td><td style="text-align:left;"><a href="A1020.htm">数列排序</a></td><td style="text-align:left;"></td><td>4123/7336 (平均分：63.53)</td><td></td></tr> 
+<tr><td>1021</td><td style="text-align:left;"><a href="A1021.htm">集合运算</a></td><td style="text-align:left;"></td><td>1810/6731 (平均分：44.91)</td><td></td></tr> 
+<tr><td>1022</td><td style="text-align:left;"><a href="A1022.htm">时间转换</a></td><td style="text-align:left;"></td><td>3717/5274 (平均分：75.91)</td><td></td></tr> 
+<tr><td>1023</td><td style="text-align:left;"><a href="A1023.htm">瓷砖铺放</a></td><td style="text-align:left;"></td><td>3343/4364 (平均分：80.53)</td><td></td></tr> 
+<tr><td>1024</td><td style="text-align:left;"><a href="A1024.htm">瓷砖问题再讨论</a></td><td style="text-align:left;"></td><td>1961/4319 (平均分：59.46)</td><td></td></tr> 
+<tr><td>1025</td><td style="text-align:left;"><a href="A1025.htm">字符串对比</a></td><td style="text-align:left;"></td><td>3113/5594 (平均分：71.43)</td><td></td></tr> 
+<tr><td>1026</td><td style="text-align:left;"><a href="A1026.htm">字符统计</a></td><td style="text-align:left;"></td><td>2685/4221 (平均分：65.23)</td><td></td></tr> 
+<tr><td>1027</td><td style="text-align:left;"><a href="A1027.htm">拼写检查</a></td><td style="text-align:left;"></td><td>1381/6932 (平均分：62.00)</td><td></td></tr> 
+<tr><td>1028</td><td style="text-align:left;"><a href="A1028.htm">选择计算</a></td><td style="text-align:left;"></td><td>2620/4518 (平均分：74.12)</td><td></td></tr> 
+<tr><td>1029</td><td style="text-align:left;"><a href="A1029.htm">补写函数</a></td><td style="text-align:left;"></td><td>1343/2872 (平均分：47.86)</td><td></td></tr> 
+<tr><td>1030</td><td style="text-align:left;"><a href="A1030.htm">球队排名</a></td><td style="text-align:left;"></td><td>1821/5348 (平均分：52.23)</td><td></td></tr> 
+<tr><td>1031</td><td style="text-align:left;"><a href="A1031.htm">画三角形1</a></td><td style="text-align:left;"></td><td>2715/3990 (平均分：68.05)</td><td></td></tr> 
+<tr><td>1032</td><td style="text-align:left;"><a href="A1032.htm">画三角形2</a></td><td style="text-align:left;"></td><td>2259/2912 (平均分：81.67)</td><td></td></tr> 
+<tr><td>1033</td><td style="text-align:left;"><a href="A1033.htm">绘制图形</a></td><td style="text-align:left;"></td><td>1754/2788 (平均分：72.02)</td><td></td></tr> 
+<tr><td>1034</td><td style="text-align:left;"><a href="A1034.htm">孪生素数对</a></td><td style="text-align:left;"></td><td>1778/7380 (平均分：61.77)</td><td></td></tr> 
+<tr><td>1035</td><td style="text-align:left;"><a href="A1035.htm">素数之和</a></td><td style="text-align:left;"></td><td>2227/4500 (平均分：58.46)</td><td></td></tr> 
+<tr><td>1036</td><td style="text-align:left;"><a href="A1036.htm">分解质因数</a></td><td style="text-align:left;"></td><td>2218/3857 (平均分：63.47)</td><td></td></tr> 
+<tr><td>1037</td><td style="text-align:left;"><a href="A1037.htm">下楼问题</a></td><td style="text-align:left;"></td><td>2856/7321 (平均分：76.55)</td><td></td></tr> 
+<tr><td>1038</td><td style="text-align:left;"><a href="A1038.htm">超级重复串</a></td><td style="text-align:left;"></td><td>1127/3014 (平均分：61.86)</td><td></td></tr> 
+<tr><td>1039</td><td style="text-align:left;"><a href="A1039.htm">欢乐的跳跃者</a></td><td style="text-align:left;"></td><td>1418/3152 (平均分：60.35)</td><td></td></tr> 
+<tr><td>1040</td><td style="text-align:left;"><a href="A1040.htm">Cantor表</a></td><td style="text-align:left;"></td><td>1360/2487 (平均分：69.37)</td><td></td></tr> 
+<tr><td>1041</td><td style="text-align:left;"><a href="A1041.htm">矩阵乘法</a></td><td style="text-align:left;"></td><td>1584/4752 (平均分：61.22)</td><td></td></tr> 
+<tr><td>1042</td><td style="text-align:left;"><a href="A1042.htm">矩形面积交</a></td><td style="text-align:left;"></td><td>1033/4523 (平均分：62.05)</td><td></td></tr> 
+<tr><td>1043</td><td style="text-align:left;"><a href="A1043.htm">完美的代价</a></td><td style="text-align:left;"></td><td>700/2785 (平均分：46.32)</td><td></td></tr> 
+<tr><td>1044</td><td style="text-align:left;"><a href="A1044.htm">Fibonacci数列求和</a></td><td style="text-align:left;"></td><td>3225/6176 (平均分：52.22)</td><td></td></tr> 
+<tr><td>1045</td><td style="text-align:left;"><a href="A1045.htm">交换</a></td><td style="text-align:left;"></td><td>1441/2852 (平均分：50.69)</td><td></td></tr> 
+<tr><td>1046</td><td style="text-align:left;"><a href="A1046.htm">加法器</a></td><td style="text-align:left;"></td><td>1476/2833 (平均分：65.71)</td><td></td></tr> 
+<tr><td>1047</td><td style="text-align:left;"><a href="A1047.htm">做明智的消费者</a></td><td style="text-align:left;"></td><td>1453/3169 (平均分：60.00)</td><td></td></tr> 
+<tr><td>1048</td><td style="text-align:left;"><a href="A1048.htm">数字三角形</a></td><td style="text-align:left;"></td><td>1099/1672 (平均分：78.11)</td><td></td></tr> 
+<tr><td>1049</td><td style="text-align:left;"><a href="A1049.htm">命题逻辑</a></td><td style="text-align:left;"></td><td>292/1266 (平均分：56.76)</td><td></td></tr> 
+<tr><td>1050</td><td style="text-align:left;"><a href="A1050.htm">碱基比例</a></td><td style="text-align:left;"></td><td>1133/2022 (平均分：62.67)</td><td></td></tr> 
+<tr><td>1051</td><td style="text-align:left;"><a href="A1051.htm">DNA序列</a></td><td style="text-align:left;"></td><td>1382/2484 (平均分：61.52)</td><td></td></tr> 
+<tr><td>1052</td><td style="text-align:left;"><a href="A1052.htm">数的读法</a></td><td style="text-align:left;"></td><td>675/1798 (平均分：65.87)</td><td></td></tr> 
+<tr><td>1053</td><td style="text-align:left;"><a href="A1053.htm">The Next Cow</a></td><td style="text-align:left;"></td><td>2238/2889 (平均分：78.11)</td><td></td></tr> 
+<tr><td>1054</td><td style="text-align:left;"><a href="A1054.htm">奶牛的罢工</a></td><td style="text-align:left;"></td><td>1776/3235 (平均分：59.94)</td><td></td></tr> 
+<tr><td>1055</td><td style="text-align:left;"><a href="A1055.htm">“The Next Cow” Strikes Back</a></td><td style="text-align:left;"></td><td>1076/3269 (平均分：50.91)</td><td></td></tr> 
+<tr><td>1056</td><td style="text-align:left;"><a href="A1056.htm">Sine之舞</a></td><td style="text-align:left;"></td><td>866/1151 (平均分：75.24)</td><td></td></tr> 
+<tr><td>1057</td><td style="text-align:left;"><a href="A1057.htm">FJ的字符串</a></td><td style="text-align:left;"></td><td>1336/2007 (平均分：68.38)</td><td></td></tr> 
+<tr><td>1058</td><td style="text-align:left;"><a href="A1058.htm">芯片测试</a></td><td style="text-align:left;"></td><td>980/1797 (平均分：62.52)</td><td></td></tr> 
+<tr><td>1059</td><td style="text-align:left;"><a href="A1059.htm">求解二元整数不定方程</a></td><td style="text-align:left;"></td><td>1075/2166 (平均分：50.67)</td><td></td></tr> 
+<tr><td>1060</td><td style="text-align:left;"><a href="A1060.htm">Archery</a></td><td style="text-align:left;"></td><td>344/1322 (平均分：37.12)</td><td></td></tr> 
+<tr><td>1061</td><td style="text-align:left;"><a href="A1061.htm">求因子个数</a></td><td style="text-align:left;"></td><td>1924/2829 (平均分：72.83)</td><td></td></tr> 
+<tr><td>1062</td><td style="text-align:left;"><a href="A1062.htm">龟兔赛跑预测</a></td><td style="text-align:left;"></td><td>965/2755 (平均分：61.18)</td><td></td></tr> 
+<tr><td>1063</td><td style="text-align:left;"><a href="A1063.htm">求导函数的值</a></td><td style="text-align:left;"></td><td>559/3945 (平均分：43.56)</td><td></td></tr> 
+<tr><td>1064</td><td style="text-align:left;"><a href="A1064.htm">排名计算</a></td><td style="text-align:left;"></td><td>1099/1925 (平均分：57.09)</td><td></td></tr> 
+<tr><td>1065</td><td style="text-align:left;"><a href="A1065.htm">龟兔赛跑</a></td><td style="text-align:left;"></td><td>219/1241 (平均分：48.69)</td><td></td></tr> 
+<tr><td>1066</td><td style="text-align:left;"><a href="A1066.htm">集合合并</a></td><td style="text-align:left;"></td><td>636/2174 (平均分：40.47)</td><td></td></tr> 
+<tr><td>1067</td><td style="text-align:left;"><a href="A1067.htm">Fibonacci数列整除问题</a></td><td style="text-align:left;"></td><td>691/3733 (平均分：52.64)</td><td></td></tr> 
+<tr><td>1068</td><td style="text-align:left;"><a href="A1068.htm">回形取数</a></td><td style="text-align:left;"></td><td>1231/3388 (平均分：64.50)</td><td></td></tr> 
+<tr><td>1069</td><td style="text-align:left;"><a href="A1069.htm">幻方</a></td><td style="text-align:left;"></td><td>487/1178 (平均分：52.03)</td><td></td></tr> 
+<tr><td>1070</td><td style="text-align:left;"><a href="A1070.htm">多项式求导</a></td><td style="text-align:left;"></td><td>839/4534 (平均分：56.97)</td><td></td></tr> 
+<tr><td>1071</td><td style="text-align:left;"><a href="A1071.htm">分数线划定</a></td><td style="text-align:left;"></td><td>1048/2543 (平均分：54.20)</td><td></td></tr> 
+<tr><td>1072</td><td style="text-align:left;"><a href="A1072.htm">潜伏者</a></td><td style="text-align:left;"></td><td>868/3397 (平均分：64.25)</td><td></td></tr> 
+<tr><td>1073</td><td style="text-align:left;"><a href="A1073.htm">矩阵运算</a></td><td style="text-align:left;"></td><td>1891/2821 (平均分：71.10)</td><td></td></tr> 
+<tr><td>1074</td><td style="text-align:left;"><a href="A1074.htm">线性运算</a></td><td style="text-align:left;"></td><td>1044/1358 (平均分：81.17)</td><td></td></tr> 
+<tr><td>1075</td><td style="text-align:left;"><a href="A1075.htm">报时助手</a></td><td style="text-align:left;"></td><td>1102/2736 (平均分：75.91)</td><td></td></tr> 
+<tr><td>1076</td><td style="text-align:left;"><a href="A1076.htm">约数个数</a></td><td style="text-align:left;"></td><td>1189/1888 (平均分：66.24)</td><td></td></tr> 
+<tr><td>1077</td><td style="text-align:left;"><a href="A1077.htm">坐标排序</a></td><td style="text-align:left;"></td><td>1326/2787 (平均分：52.69)</td><td></td></tr> 
+<tr><td>1078</td><td style="text-align:left;"><a href="A1078.htm">逆序对个数</a></td><td style="text-align:left;"></td><td>1387/1819 (平均分：79.30)</td><td></td></tr> 
+<tr><td>1079</td><td style="text-align:left;"><a href="A1079.htm">行列式计算</a></td><td style="text-align:left;"></td><td>600/1149 (平均分：68.72)</td><td></td></tr> 
+<tr><td>1080</td><td style="text-align:left;"><a href="A1080.htm">Fibonacci</a></td><td style="text-align:left;"></td><td>520/1673 (平均分：43.32)</td><td></td></tr> 
+<tr><td>1081</td><td style="text-align:left;"><a href="A1081.htm">二分求方程根</a></td><td style="text-align:left;"></td><td>1015/3464 (平均分：29.84)</td><td></td></tr> 
+<tr><td>1082</td><td style="text-align:left;"><a href="A1082.htm">查找第K小元素</a></td><td style="text-align:left;"></td><td>1273/5774 (平均分：32.55)</td><td></td></tr> 
+<tr><td>1083</td><td style="text-align:left;"><a href="A1083.htm">解线性方程组</a></td><td style="text-align:left;"></td><td>642/3066 (平均分：53.89)</td><td></td></tr> 
+<tr><td>1084</td><td style="text-align:left;"><a href="A1084.htm">快速傅立叶变换</a></td><td style="text-align:left;"></td><td>193/1536 (平均分：43.43)</td><td></td></tr> 
+<tr><td>1085</td><td style="text-align:left;"><a href="A1085.htm">2n皇后问题</a></td><td style="text-align:left;"></td><td>1189/3080 (平均分：53.06)</td><td></td></tr> 
+<tr><td>1086</td><td style="text-align:left;"><a href="A1086.htm">Huffuman树</a></td><td style="text-align:left;"></td><td>987/1877 (平均分：60.51)</td><td></td></tr> 
+<tr><td>1087</td><td style="text-align:left;"><a href="A1087.htm">高精度加法</a></td><td style="text-align:left;"></td><td>1339/3107 (平均分：62.01)</td><td></td></tr> 
+<tr><td>1088</td><td style="text-align:left;"><a href="A1088.htm">差分计算</a></td><td style="text-align:left;"></td><td>711/983 (平均分：75.67)</td><td></td></tr> 
+<tr><td>1089</td><td style="text-align:left;"><a href="A1089.htm">阶乘计算</a></td><td style="text-align:left;"></td><td>1010/2907 (平均分：52.22)</td><td></td></tr> 
+<tr><td>1090</td><td style="text-align:left;"><a href="A1090.htm">摆动序列</a></td><td style="text-align:left;"></td><td>497/991 (平均分：65.16)</td><td></td></tr> 
+<tr><td>1091</td><td style="text-align:left;"><a href="A1091.htm">组合输出</a></td><td style="text-align:left;"></td><td>812/1490 (平均分：63.73)</td><td></td></tr> 
+<tr><td>1092</td><td style="text-align:left;"><a href="A1092.htm">数据加密</a></td><td style="text-align:left;"></td><td>1376/2025 (平均分：72.96)</td><td></td></tr> 
+<tr><td>1093</td><td style="text-align:left;"><a href="A1093.htm">闰年</a></td><td style="text-align:left;"></td><td>3131/6543 (平均分：57.96)</td><td></td></tr> 
+<tr><td>1094</td><td style="text-align:left;"><a href="http://www.tsinsen.com/A1094.htm">牛顿迭代法求方程的根</a></td><td style="text-align:left;"></td><td>568/1452 (平均分：52.65)</td><td></td></tr> 
+<tr><td>1095</td><td style="text-align:left;"><a href="http://www.tsinsen.com/A1095.htm">教室排课</a></td><td style="text-align:left;"></td><td>1059/1870 (平均分：70.00)</td><td></td></tr> 
+<tr><td>1096</td><td style="text-align:left;"><a href="http://www.tsinsen.com/A1096.htm">求子串</a></td><td style="text-align:left;"></td><td>1119/2881 (平均分：49.76)</td><td></td></tr> 
+<tr><td>1097</td><td style="text-align:left;"><a href="http://www.tsinsen.com/A1097.htm">独木桥</a></td><td style="text-align:left;"></td><td>663/1748 (平均分：58.59)</td><td></td></tr> 
+<tr><td>1098</td><td style="text-align:left;"><a href="http://www.tsinsen.com/A1098.htm">加法分解</a></td><td style="text-align:left;"></td><td>686/1266 (平均分：65.55)</td><td></td></tr> 
+<tr><td>1099</td><td style="text-align:left;"><a href="http://www.tsinsen.com/A1099.htm">星期几</a></td><td style="text-align:left;"></td><td>834/3577 (平均分：45.73)</td><td></td></tr> 
+</tbody></table>
+</center>
+</div>
+</div>
+
+</div>
+<script type="text/javascript">
+function getTVols() { return 6+0; }
+
+function showVols()
+{
+	var names = ["基础", "NOIP", "集训队1", "集训队2", "集训队3", "集训队4", "集训队5", "集训队6", "集训队7"];
+	var vols = e("volList");
+	var volst = "";
+	var pageId = getUrlIntParam("page");
+	for (var i = 1; i <= getTVols(); ++i)
+	{
+		if (i != pageId)
+			volst += "<a href='http://www.tsinsen.com/ProblemArchive.page?page=%22%20+%20i%20+%20%22'>";
+		volst += "第" + i + "卷" + "(" + names[i-1] + ")";
+		if (i != pageId)
+			volst += "</a>";
+		volst += " &nbsp; ";
+	}
+	vols.innerHTML = volst;
+}
+showVols();
+</script>
+
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

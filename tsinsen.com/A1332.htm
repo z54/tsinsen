@@ -1,0 +1,1486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+
+<title>A1332. 电子对撞机(刘洪轩) -2012中国国家集训队命题答辩- Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"38147","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="http://www.tsinsen.com/" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="/">首页</a>
+ <div class="drop">
+  <div class=t><a href='/' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="/ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='/ProblemArchive.page' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='/ASelect.page'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="/AllSubmits.page?type=a">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='/AllSubmits.page?type=a' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='/AssignManage.page'>作业管理</a></div>
+  <div class=t><a href='/MyAssignment.page'>我的作业</a></div>
+  <div class=t><a href='/Problemlist.page'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/DiskView.page?type=d'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='/AUsers.page'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/DomainChange.page'>课程切换</a></div>
+  <div class=t><a href='/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='/ProblemManage.page'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/ChangePwd.page'>修改密码</a></div>
+  <div class=t><a href='/MyMessages.page'>我的消息</a></div>
+  <div class=t req="admin"><a href='/SendMessage.page'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='/UserManage.page'>用户管理</a></div>
+  <div class=t><a href='/ProblemAdmin.page'>试题管理</a></div>
+  <div class=t><a href='/rejudge.page'>试题复评</a></div>
+  <div class=t><a href='/ChangeUPwd.page'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='/resources.page'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="/help.page">帮助</a>
+ <div class="drop">
+  <div class=t><a href='/help.page' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/updates.page' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="/FindPassword.page">忘记密码</a> &nbsp;
+其他登录：<a href="###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<div class="probtitle" id="ptit">A1332. 电子对撞机(刘洪轩)</div>
+<div style="text-align:center; font-size:14px; vertical-align:middle;" id="pres">
+<div style="font-weight:bold; margin:8px 0px 6px 0px; ">时间限制：<span class="uline">3.0s</span> &nbsp; 内存限制：<span class="uline">256.0MB</span> &nbsp; <span id="subinterdiv"></span><span id="probtypediv"></span><span class="uline"></span></div>
+<div>总提交次数：<b><a href="/AllSubmits.page?type=a&gpid=A1332,D4457,D4460,D4564,P1710"></a></b> &nbsp; AC次数：<b></b> &nbsp; 平均分：<b></b></div>
+<div id="inputoutput"></div>
+</div>
+<div class="ralign" style="margin:20px 0 20px 0;"><div class="inl vmid">将本题分享到：</div><div class="inl vmid"><a class="share_renren" title="分享到人人网" onclick="renrenShareClick()"></a> &nbsp; <a class="share_qq" title="分享到QQ空间" onclick="qqShareClick()"></a> &nbsp; <a class="share_weibo" title="分享到新浪微博" onclick="weiboShareClick()"></a></div> &nbsp; <div class="inl vmid"><a href="###" onclick="formatChange()" id="fcl">查看未格式化的试题</a> &nbsp; <a href="###" onclick="showSubmit()">提交</a> &nbsp; <a href="###" onclick="discussProblem()">试题讨论</a></div></div>
+<div id="psrc" style="margin-top:20px; display:none;">
+<div class="pdsec">试题来源</div><div class="pdcont">　　2012中国国家集训队命题答辩</div>
+</div>
+<div id="pinputs" style="display:none; ">
+<div class="pdsec">输入数据</div>
+<div class="pdcont"><span class="notice">　　这是一道提交答案的试题，下面给出了该题的输入数据：</span></div>
+<div id="inputlist" class="pddata">
+</div>
+</div>
+<div id="pcont1" style="margin-top:20px; display:block;">
+<div class='pdcont'><b>【题意描述】</b><br />
+　　感谢HQ提供题目描述<br />
+　　Q国最近科学技术不断进步，经过不懈努力，Q国主席QQ终于在质子对撞机的基础上研发了新一代能量供给装置：电子对撞机。<br />
+　　这个设备呈长条状且对外封闭，设备内部有N个带有一定能量的电子。长条状的外形使得这些电子只能沿条形走向左右运动。设备长度为L，左端位置为0，右端位置为L。内部的电子速率恒定，每一个单位时间在左右方向上移动一个单位长度，而方向可能是向左或向右。当两个电子相遇即运动到同一个点时，它们之间会发生对撞，对撞后它们的速率不变但运动方向反向。设备的两个端点处(即坐标为0和L的位置)存在保护外壳，当电子运动到端点时会和外壳发生碰撞，碰撞后电子也会保持不变的速率但运动方向反向。电子分为高能电子和低能电子，电子之间对撞会产生能量，低能电子和低能电子对撞会产生1个单位的能量，低能电子和高能电子对撞会产生4个单位的能量，高能电子和高能电子对撞会产生25个单位的能量，电子和外壳碰撞不会产生能量。设备内部还有M个能量接收器，每个接收器可以接受从A到B的一个区间内（包括两个端点）的能量，且接收器可以接受的范围没有交集。若电子对撞的位置处于接收器的接受范围内，对撞产生的能量会被接收器接受，若对撞位置不在接收器上，这些能量则会丢失。这项技术的核心在于：对撞时电子的能量不会有损失，所以电子对撞机可以一直不断地运行下去供给能量。<br />
+　　现在QQ已经制造出了第一批电子对撞机，并测得了时刻为0时电子的位置和运动状态，现在QQ想知道从时刻0到时刻T(包括T)总共接收到的能量，于是这个任务交给了神犇你。<br />
+<b>【输入格式】</b><br />
+　　第一行四个整数 N, M, L, T，分别表示电子个数，能量接收器个数，设备长度和时间。<br />
+　　之后N行每行3个整数，Xi, Pi, Ei分别表示第i个电子的位置，运动方向和能量级别。<br />
+　　Pi为1表示向右运动，为-1表示向左运动。<br />
+　　Ei为0表示低能电子，为1表示高能电子。<br />
+　　之后M行每行2个整数，Ai和 Bi，表示接收器的接收范围。<br />
+<b>【输出格式】</b><br />
+　　仅一行，包括一个整数，表示总共接收到的能量数。<br />
+<b>【样例输入】</b><br />
+　　3 1 8 7<br />
+　　2 1 0<br />
+　　4 -1 0<br />
+　　7 1 1<br />
+　　3 6<br />
+<b>【样例输出】</b><br />
+　　5<br />
+<b>【样例说明】</b><br />
+　　T=1时，在位置3，第一个电子和第二个电子对撞，产生1的能量。<br />
+　　在位置8，第三个电子和右侧外壳碰撞。<br />
+　　T=3.5时，在位置5.5，第二个电子和第三个电子对撞，产生4的能量。<br />
+　　T=4时，在位置0，第一个电子和左侧外壳碰撞。<br />
+　　T=6时，在位置8，第三个电子和右侧外壳碰撞。<br />
+　　T=6.5时，在位置2.5，第一个电子和第二个电子对撞，产生1的能量，由于在接收器范围外，能量丢失。<br />
+　　最后结果为1+4=5个单位能量。<br />
+<b>【数据规模和约定】</b><br />
+　　输入保证开始时任意两个电子不处于同一个位置。<br />
+　　输入保证接收器的接受范围没有交集，且所有接收器按坐标从小到大的顺序给出。<br />
+　　共20组数据，满足如下条件<br />
+<br />
+<table cellspacing=0 cellpadding=2px style='border-collapse:collapse;' class='table table-striped table-horver'><tbody><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>1 ~ 2<br />
+</td><td valign="top" style='border:solid 1.0pt'>N &lt;= 10<br />
+</td><td valign="top" style='border:solid 1.0pt'>M &lt;= 3<br />
+</td><td valign="top" style='border:solid 1.0pt'>L &lt;= 1000,<br />
+T &lt;= 100000<br />
+</td><td valign="top" rowspan="7" style='border:solid 1.0pt'>2 &lt;= N &lt;= 1000000,<br />
+1 &lt;= M &lt;= 10,<br />
+2 &lt;= L &lt;= 100000000,<br />
+0 &lt;= T &lt;= 1000000000,<br />
+0 &lt; X &lt; L<br />
+0 &lt;= A &lt; B &lt;= L<br />
+<br />
+</td></tr><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>3 ~ 4<br />
+</td><td valign="top" style='border:solid 1.0pt'>N &lt;= 100<br />
+</td><td valign="top" rowspan="2" style='border:solid 1.0pt'>Ei = 0<br />
+</td><td valign="top" style='border:solid 1.0pt'>L &lt;= 1000000<br />
+</td></tr><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>5 ~ 6<br />
+</td><td valign="top" rowspan="2" style='border:solid 1.0pt'>N &lt;= 1000<br />
+</td><td valign="top" rowspan="5" style='border:solid 1.0pt'><br />
+</td></tr><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>7 ~ 8<br />
+</td><td valign="top" rowspan="2" style='border:solid 1.0pt'>M = 1 且<br />
+A1 = 0, B1 = L<br />
+</td></tr><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>9 ~ 10<br />
+</td><td valign="top" rowspan="2" style='border:solid 1.0pt'>N &lt;= 100000<br />
+</td></tr><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>11~12<br />
+</td><td valign="top" rowspan="2" style='border:solid 1.0pt'><br />
+</td></tr><tr  style='border:solid 1.0pt'><td valign="top" style='border:solid 1.0pt'>13~20<br />
+</td><td valign="top" style='border:solid 1.0pt'><br />
+</td></tr></tbody></table></div>
+
+</div>
+<div id="pcont2" style="margin-top:20px; display:none;">
+<p><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG />
+</o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>EN-US</w:LidThemeOther>
+<w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+<w:UseFELayout />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【题意描述】</span></b></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">感谢</span><span lang="EN-US">HQ</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">提供题目描述</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Q</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">国最近科学技术不断进步，经过不懈努力，</span><span lang="EN-US" style="mso-bidi-font-size:
+10.5pt">Q</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">国主席</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt">QQ</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">终于在质子对撞机的基础上研发了新一代能量供给装置：电子对撞机。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">这个</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">设备呈长条状且对外封闭，设备内部有</span><span lang="EN-US">N</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个带有一定能量的电子。长条状的外形使得这些电子只能沿条形走向左右运动。设备长度为</span><span lang="EN-US">L</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，左端位置为</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，右端位置为</span><span lang="EN-US">L</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。内部的电子速率恒定，每一个单位时间在左右方向上移动一个单位长度，而方向可能是向左或向右。当两个电子相遇即运动到同一个点时，它们之间会发生对撞，对撞后它们的速率不变但运动方向反向。设备的两个端点处</span><span lang="EN-US">(</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">即坐标为</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和</span><span lang="EN-US">L</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的位置</span><span lang="EN-US">)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">存在保护外壳，当电子运动到端点时会和外壳发生碰撞，碰撞后电子也会保持不变的速率但运动方向反向。电子分为高能电子和低能电子，电子之间对撞会产生能量，低能电子和低能电子对撞会产生</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个单位的能量，低能电子和高能电子对撞会产生</span><span lang="EN-US">4</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个单位的能量，高能电子和高能电子对撞会产生</span><span lang="EN-US">25</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个单位的能量，电子和外壳碰撞不会产生能量。设备内部还有</span><span lang="EN-US">M</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个能量接收器，每个接收器可以接受从</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">到</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的一个区间内（包括两个端点）的能量，且接收器可以接受的范围没有交集。若电子对撞的位置处于接收器的接受范围内，对撞产生的能量会被接收器接受，若对撞位置不在接收器上，这些能量则会丢失。这项技术的核心在于：对撞时电子的能量不会有损失，所以电子对撞机可以一直不断地运行下去供给能量。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">现在</span><span lang="EN-US">QQ</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">已经制造出了第一批电子对撞机，并测得了时刻为</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">时电子的位置和运动状态，现在</span><span lang="EN-US">QQ</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">想知道从时刻</span><span lang="EN-US">0</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">到时刻</span><span lang="EN-US">T(</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">包括</span><span lang="EN-US">T)</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">总共接收到的能量，于是这个任务交给了神犇你。</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【输入格式】</span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">第一行四个整数</span><span lang="EN-US"> N, M, L, T</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，分别表示电子个数，能量接收器个数，设备长度和时间。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">之后</span><span lang="EN-US">N</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">行每行</span><span lang="EN-US">3</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">个整数，</span><span lang="EN-US">Xi, Pi, Ei</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">分别表示第</span><span lang="EN-US">i</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">个电子的位置，运动方向和能量级别。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">Pi</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为</span><span lang="EN-US">1</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">表示向右运动，为</span><span lang="EN-US">-1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">表示向左运动。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">Ei</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">为</span><span lang="EN-US">0</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">表示低能电子，为</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">表示高能电子。</span></p>
+<p class="MsoNormal" style="margin-left:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">之后</span><span lang="EN-US">M</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">行每行</span><span lang="EN-US">2</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">个整数，</span><span lang="EN-US">Ai</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US"> Bi</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，表示接收器的接收范围。</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【输出格式】</span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">仅</span><span style="font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">一行，包括一个整数，表示总共接收到的能量数。</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【样例输入】</span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">3 1 8 7</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">2 1 0</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">4 -1 0</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">7 1 1</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">3 6</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【样例输出】</span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>5</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【样例说明】</span></b></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span lang="EN-US">T=1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时，在位置</span><span lang="EN-US">3</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，第一个电子和第二个电子对撞，产生</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的能量。</span></p>
+<p class="MsoNormal" style="margin-left:21.0pt;text-indent:42.0pt;mso-char-indent-count:
+4.0"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在位置</span><span lang="EN-US">8</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，第三个电子和右侧外壳碰撞。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">T=3.5</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时，在位置</span><span lang="EN-US">5.5</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，第二个电子和第三个电子对撞，产生</span><span lang="EN-US">4</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的能量。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">T=4</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时，在位置</span><span lang="EN-US">0</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，第一个电子和左侧外壳碰撞。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">T=6</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时，在位置</span><span lang="EN-US">8</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，第三个电子和右侧外壳碰撞。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US">T=6.5</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">时，在位置</span><span lang="EN-US">2.5</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，第一个电子和第二个电子对撞，产生</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的能量，由于在接收器范围外，能量丢失。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">最后结果为</span><span lang="EN-US">1+4=5</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个单位能量。</span></p>
+<p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">【数据规模和约定】</span></b></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">输入保证开始时任意两个电子不处于同一个位置。</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">输入保证接收器的接受范围没有交集，且所有接收器按坐标从小到大的顺序给出。</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt"><span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">共</span><span lang="EN-US">20</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">组数据，满足如下条件</span></p>
+<p class="MsoNormal"><!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG />
+</o:OfficeDocumentSettings>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>EN-US</w:LidThemeOther>
+<w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:EnableOpenTypeKerning />
+<w:DontFlipMirrorIndents />
+<w:OverrideTableStyleHps />
+<w:UseFELayout />
+</w:Compatibility>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="0" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman","serif";}
+</style>
+<![endif]--></p>
+<table cellspacing="0" cellpadding="0" border="1" class="MsoNormalTable" style="border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+    mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+    .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext">
+    <tbody>
+        <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;height:19.2pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt">
+            <p class="MsoNormal"><span lang="EN-US">1 ~ 2</span></p>
+            </td>
+            <td width="104" valign="top" style="width:77.95pt;border:solid windowtext 1.0pt;
+            border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+            solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt">
+            <p class="MsoNormal"><span lang="EN-US">N &lt;= 10</span></p>
+            </td>
+            <td width="123" valign="top" style="width:92.15pt;border:solid windowtext 1.0pt;
+            border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+            solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt">
+            <p class="MsoNormal"><span lang="EN-US">M &lt;= 3</span></p>
+            </td>
+            <td width="132" valign="top" style="width:99.25pt;border:solid windowtext 1.0pt;
+            border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+            solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt">
+            <p class="MsoNormal"><span lang="EN-US">L &lt;= 1000,</span></p>
+            <p class="MsoNormal"><span lang="EN-US">T &lt;= 100000</span></p>
+            </td>
+            <td width="155" valign="top" rowspan="7" style="width:115.9pt;border:solid windowtext 1.0pt;
+            border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+            solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:19.2pt">
+            <p class="MsoNormal"><span lang="EN-US">2 &lt;= N &lt;= 1000000,</span></p>
+            <p class="MsoNormal"><span lang="EN-US">1 &lt;= M &lt;= 10,</span></p>
+            <p class="MsoNormal"><span lang="EN-US">2 &lt;= L &lt;= 100000000,</span></p>
+            <p class="MsoNormal"><span lang="EN-US">0 &lt;= T &lt;= 1000000000,</span></p>
+            <p class="MsoNormal"><span lang="EN-US">0 &lt; X &lt; L</span></p>
+            <p class="MsoNormal"><span lang="EN-US">0 &lt;= A &lt; B &lt;= L</span></p>
+            <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:1;height:3.5pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">3 ~ 4</span></p>
+            </td>
+            <td width="104" valign="top" style="width:77.95pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">N &lt;= 100</span></p>
+            </td>
+            <td width="123" valign="top" rowspan="2" style="width:92.15pt;border-top:none;
+            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">Ei = 0</span></p>
+            </td>
+            <td width="132" valign="top" style="width:99.25pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">L &lt;= 1000000</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:2;height:13.55pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt">
+            <p class="MsoNormal"><span lang="EN-US">5 ~ 6</span></p>
+            </td>
+            <td width="104" valign="top" rowspan="2" style="width:77.95pt;border-top:none;
+            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt">
+            <p class="MsoNormal"><span lang="EN-US">N &lt;= 1000</span></p>
+            </td>
+            <td width="132" valign="top" rowspan="5" style="width:99.25pt;border-top:none;
+            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:13.55pt">
+            <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:3;height:3.5pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">7 ~ 8</span></p>
+            </td>
+            <td width="123" valign="top" rowspan="2" style="width:92.15pt;border-top:none;
+            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">M = 1 </span><span style="font-family:
+            宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">且</span></p>
+            <p class="MsoNormal"><span lang="EN-US">A1 = 0, B1 = L</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:4;height:3.5pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">9 ~ 10</span></p>
+            </td>
+            <td width="104" valign="top" rowspan="2" style="width:77.95pt;border-top:none;
+            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">N &lt;= 100000</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:5;height:12.05pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt;height:12.05pt">
+            <p class="MsoNormal"><span lang="EN-US">11~12</span></p>
+            </td>
+            <td width="123" valign="top" rowspan="2" style="width:92.15pt;border-top:none;
+            border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:12.05pt">
+            <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:6;mso-yfti-lastrow:yes;height:3.5pt">
+            <td width="54" valign="top" style="width:40.85pt;border:solid windowtext 1.0pt;
+            border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">13~20</span></p>
+            </td>
+            <td width="104" valign="top" style="width:77.95pt;border-top:none;border-left:
+            none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt;height:3.5pt">
+            <p class="MsoNormal"><span lang="EN-US">&nbsp;</span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<br />
+<div id="pcode" class="code">
+<div id="pcodesu" style="display:none;">
+<hr />
+<span class='notice'>这是一道完善程序的试题，你只需要在下面程序标注的"<span class='code'><span class="Y">@你的代码</span></span>"的位置补充适当的语句或语句段使程序能正确运行即可，在提交的时候，你要提交的内容只包括补充的内容，不包括其他的代码。</span>
+</div>
+</div>
+
+<div class="ralign"><a href="###" onclick="showSubmit()">提交</a> &nbsp; <a href="###" onclick="discussProblem()">试题讨论</a></div>
+<script type="text/javascript">
+
+var viewType = "f";
+_codeLines = document.createElement("OL");
+e("pcode").appendChild(_codeLines);
+function getGPID() {
+	return "A1332";
+}
+var gpid = getGPID();
+function getProbTitle() {
+	return "电子对撞机(刘洪轩)";
+}
+function getProbType() {
+	return "DEFAULT";
+}
+function getProbContent() { return e("pcont1").innerHTML; }
+function getSrc() {
+	return "2012中国国家集训队命题答辩";
+}
+function getCode() {
+	return "";
+}
+function getLangs() {
+	return "CPP,C0X,VC9,C,JAVA,PAS,CS";
+}
+function getInDataCount() {
+	return "0";
+}
+function getInputFileName() {
+	return "";
+}
+function getOutputFileName() {
+	return "";
+}
+function getSubinter() {
+	var inter = "0";
+	var iint = parseInt(""+inter);
+	if (!(iint>0))
+		return 0;
+	return iint;
+}
+function getRemain() {
+	var remain = "0";
+	var iremain = parseInt(""+remain);
+	if (!(iremain>0))
+		return 0;
+	return iremain;
+}
+
+function initProb()
+{
+	if (getSrc() && getSrc()!="")
+		e("psrc").style.display = "block";
+	var cod = getCode();
+	if (cod && cod.indexOf("@你的代码")>=0)
+	{
+		e("pcodesu").style.display = "block";
+		port_fc(cod, addline);
+	}
+	if (getSubinter()>0)
+	{
+		var rem = getRemain();
+		var intervalVar;
+		var startT = new Date().getTime();
+		function setSubInt()
+		{
+			var passT = Math.floor((new Date().getTime() - startT) / 1000);
+			var crem = rem - passT;
+			var minu = Math.floor(crem/60); var sec = crem - minu*60;
+			var subTxt = "";
+			if (crem<=0)
+				subTxt = "<span class=gcolor>现在可以提交</span>";
+			else
+				subTxt = "<span class=rcolor>还剩" + (minu>0?minu+"分":"") + sec + "秒</span>";
+			var html = "代码提交间隔：<span class='uline'>" + getSubinter() + "分钟(" + subTxt + ")</span> &nbsp; ";
+			e("subinterdiv").innerHTML = html;
+			if (crem <= 0)
+			{
+				clearInterval(intervalVar);
+			}
+		}
+		intervalVar = setInterval(setSubInt, 1000);
+		setSubInt();
+	}
+	if (getProbType()=="SUBMIT")
+	{
+		e("probtypediv").innerHTML = "<span class='uline'>提交答案型</span> &nbsp; ";
+		e("pinputs").style.display = "block";
+		var inCnt = parseInt(getInDataCount());
+		var _dlist = newT("UL", e("inputlist"));
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "下载全部");
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1332",dataid:"all"},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+		newT("br", _dlist);
+		for (var i = 0; i < inCnt; ++i)
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "input" + (i+1) + ".txt");
+			ca.dataId = i+1;
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1332",dataid:this.dataId},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+	}
+	var inpName = getInputFileName(), outName = getOutputFileName();
+	var inOutStr = "";
+	if (inpName && inpName!="")
+	{
+		inOutStr = "输入文件名：<b>" + inpName + "</b>";
+	}
+	if (outName && outName!="")
+	{
+		if (inOutStr != "")
+			inOutStr += " &nbsp; ";
+		inOutStr += "输出文件名：<b>" + outName + "</b>";
+	}
+	e("inputoutput").innerHTML = inOutStr;
+}
+
+initProb();
+
+function weiboShareClick() {
+	var _w = 16 , _h = 16;
+	var param = {
+		url:location.href,
+		type:'3',
+		count:'', /**是否显示分享数，1显示(可选)*/
+		appkey:'1707773381', /**您申请的应用appkey,显示分享来源(可选)*/
+		title:"试题 "+getProbTitle(), /**分享的文字内容(可选，默认为所在页面的title)*/
+		pic:'http://www.tsinsen.com/images/tsinsen100.png', /**分享图片的路径(可选)*/
+		ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+		language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+		rnd:new Date().valueOf()
+	}
+	rrShareOnclick(param, "http://service.weibo.com/share/share.php");
+}
+
+function qqShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		url:location.href,
+		showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+		desc:'',/*默认分享理由(可选)*/
+		summary:cont,/*分享摘要(可选)*/
+		title:getProbTitle(),/*分享标题(可选)*/
+		site:'清橙网络自动评测系统',/*分享来源 如：腾讯网(可选)*/
+		pics:'http://www.tsinsen.com/images/tsinsen100.png', /*分享图片的路径(可选)*/
+		style:'203',
+		width:22,
+		height:22
+	};
+	rrShareOnclick(param, "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey");
+}
+
+function renrenShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		resourceUrl : '',	//分享的资源Url
+		pic : 'http://www.tsinsen.com/images/tsinsen100.png',		//分享的主题图片Url
+		title :getProbTitle(),		//分享的标题
+		description : cont	//分享的详细描述
+	};
+	rrShareOnclick(param);
+}
+
+var lineNum = 0;
+function addline(st) { newT("LI", _codeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", '<span class="Y">@你的代码</span>')); }
+
+function OnUploadCompleted(ret, fn, msg)
+{
+	if (ret+""=="1")
+	{
+		setData("lastsubtype", "FILE");
+		portxd("/test.SubmitCode.dt", {gpid:gpid,codefn:msg}, function(obj){
+			if (""+obj["ret"]=="1")
+			{
+				window.location.href = "/AllSubmits.page?type=a";
+			}
+			else
+			{
+				alert(obj["msg"]);
+				showSubmit();
+			}
+		});
+	}
+	else
+	{
+		alert(msg);
+		showSubmit();
+	}
+}
+
+function showSubmit()
+{
+	var cc = getCode();
+	var canUseFile = (cc==null)||(cc=="");
+	var isSubmit = (getProbType()=="SUBMIT");
+	var canUsePaste = !isSubmit;
+	var _langs;
+	var _pop = createPopWin("提交代码", function(gdiv){
+		var divS = newT("", gdiv, "vsp");
+		
+		var fdiv = newT("", gdiv);
+		newT("", fdiv, "", '<iframe id="dataupf" src="/CommonFileUpload.page" style="width:220px; height:40px; margin:0px; padding:0px; border:0px; "></iframe>');
+		
+		var div = newT("", gdiv);
+		
+		fdiv.style.display = "none";
+		div.style.display = "block";
+		
+		function setDivS1()
+		{
+			if (!canUsePaste && canUseFile)
+			{
+				setDivS2()
+				return ;
+			}
+			fdiv.style.display = "none";
+			div.style.display = "block";
+			divS.innerHTML = "";
+			var l1 = newT("span", divS, "", "<b>* 粘贴代码提交</b>");
+			if (canUseFile)
+			{
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+				
+				var l2 = newT("a", divS, "", "上传文件提交");
+				l2.href = "###";
+				l2.onclick = function() {
+					setDivS2();
+				};
+			}
+		}
+		function toLangDesc(lang)
+		{
+			if (lang=="CPP") return "C++ (MinGW g++ 4.7.2)";
+			if (lang=="C") return "C (MinGW gcc 4.7.2)";
+			if (lang=="C0X") return "C++0x (MinGW g++ 4.7.2 --std=c++0x)";
+			if (lang=="VC9") return "VC (Microsoft Visual C++ 2008)";
+			if (lang=="PAS") return "PAS (Free Pascal Compiler 2.4.0)";
+			if (lang=="CS") return "C# (Microsoft .NET 3.5)";
+			if (lang=="JAVA") return "Java (Java 1.7.0_15)";
+			if (lang=="RUBY") return "Ruby (Ruby 1.8.6)";
+			if (lang=="PERL") return "Perl (Perl v5.16.3)";
+			if (lang=="PYTHON") return "Python (Python 3.3.0)";
+			if (lang=="PYTHON27") return "Python (Python 2.7.3)";
+			if (lang=="PHP") return "PHP (PHP 5.4.13)";
+			return lang;
+		}
+		function setDivS2()
+		{
+			if (canUsePaste && !canUseFile)
+			{
+				setDivS1()
+				return ;
+			}
+			div.style.display = "none";
+			fdiv.style.display = "block";
+			divS.innerHTML = "";
+			if (canUsePaste)
+			{
+				var l1 = newT("a", divS, "", "粘贴代码提交");
+				l1.href = "###";
+				l1.onclick = function() {
+					setDivS1();
+				};
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+			}
+			var l2 = newT("span", divS, "", "<b>* 上传文件提交</b>");
+			if (isSubmit)
+			{
+				newT("", divS, "", "这是一道提交答案的试题，请将<b>output*.txt</b>打包在一起后提交。");
+			}
+		}
+		var prevsubtype = getData("lastsubtype");
+		if (prevsubtype == "FILE")
+			setDivS2();
+		else
+			setDivS1();
+		
+		var _lang = newT(null, div, "smallsp", "语言选择：");
+		_langs = newT("select", _lang);
+
+		var langs = getLangs();
+		var langss = langs.split(",");
+		_langs.options.length = 0;
+		for (la in langss)
+			_langs.options.add(new Option(toLangDesc(langss[la]), langss[la]));
+
+		try {
+			var prevlang = getData("lastlang");
+			if (prevlang)
+			{
+				for (var i = 0; i < _langs.options.length; i++)
+					if (_langs.options[i].value == prevlang)
+						_langs.options[i].selected = true;
+			}
+		} catch ( errx ) {};
+
+		var _code = newT(null, div, "code");
+		var _curcode = getCode() || "";
+		var lineNum = 0;
+		if (_curcode && _curcode.indexOf("@你的代码")>=0)
+		{
+			var _scodeLines = newT("OL", _code);
+			port_fc(_curcode, function(st){ newT("LI", _scodeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", "<textarea name='code' id='code' class='code' style='height:200px;width:600px;'></textarea>")); });
+		}
+		else
+			_code.innerHTML = "<textarea name='code' id='code' class='code' style='height:430px;width:660px;'></textarea>";
+		var _btns = newT("", div, "btns");
+		var _okBtn = createButton(_btns, "提交", function() {
+			var vgpid = gpid;
+			var vlang = _langs.value;
+			var vcode = e("code").value;
+			if (vcode=="")
+			{
+				alert("请输入要提交的程序。");
+				_okBtn.enableClick();
+				return true;
+			}
+			else
+			{
+				setData("lastsubtype", "CODE");
+				portxd("/test.SubmitCode.dt", {gpid:vgpid,lang:vlang,code:vcode}, function(obj){
+					setData("lastlang", vlang);
+					if (""+obj["ret"]=="1")
+					{
+						window.location.href = "/AllSubmits.page?type=a";
+					}
+					else
+					{
+						alert(obj["msg"]);
+						_okBtn.enableClick();
+					}
+				});
+			}
+			return false;
+		});
+		var _closeBtn = createButton(_btns, "关闭", function() { _pop.doHide(); });
+	}, "", function(){}, 800);
+}
+function formatChange()
+{
+	if (viewType == "f")
+	{
+		viewType = "p";
+		e("pcont1").style.display = "none";
+		e("pcont2").style.display = "block";
+		e('fcl').innerHTML = "查看格式化的试题";
+	}
+	else
+	{
+		viewType = "f";
+		e("pcont2").style.display = "none";
+		e("pcont1").style.display = "block";
+		e('fcl').innerHTML = "查看未格式化的试题";
+	}
+}
+function discussProblem() { location.href = "/Forum/Index.page?gpid=" + gpid; }
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+  	inlineMath: [ ['$'+'$','$'+'$'], ['\\(','\\)']],
+  	displayMath: [ ['\\[','\\]'] ]
+  }
+});
+</script>
+<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

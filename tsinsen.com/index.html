@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="http://www.tsinsen.com/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+<meta name="description" content="清橙 清橙网络自动评测系统 本系统由胡伟栋开发和管理，用于C/C++/Pascal/Java程序设计基础、算法、数据结构等课程的教学，以及中学信息学奥林匹克竞赛、大学ACM/ICPC程序设计竞赛的管理网站。本站已多次应用于清华大学、中国人民大学等学校的课程教学以及清华大学研究生入学考试、两岸清华、清华大学信息学夏令营的评测，并用于信息学奥林匹克中国国家队的训练中。" />
+<meta name="keywords" content="信息学奥林匹克竞赛 ACM/ICPC大学生程序设计竞赛 程序设计基础 程序设计训练 计算机程序设计题库 在线评测系统 在线提交系统 胡伟栋 清橙网络自动评测系统 清橙 tsinsen NOI IOI NOIP ACM ICPC online judge 中国国家集训队试题 课程管理 培训管理" />
+<title>首页 - Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"36909","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="www_tsinsen_default.html" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="www_tsinsen_default.html">首页</a>
+ <div class="drop">
+  <div class=t><a href='www_tsinsen_default.html' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='ProblemArchive.htm' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='ASelect.htm'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="AllSubmits.htm">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='AllSubmits.htm' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='AssignManage.htm'>作业管理</a></div>
+  <div class=t><a href='MyAssignment.htm'>我的作业</a></div>
+  <div class=t><a href='Problemlist.htm'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DiskView.htm'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='AUsers.htm'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DomainChange.htm'>课程切换</a></div>
+  <div class=t><a href='http://www.tsinsen.com/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='http://www.tsinsen.com/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='ProblemManage.htm'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ChangePwd.htm'>修改密码</a></div>
+  <div class=t><a href='MyMessages.htm'>我的消息</a></div>
+  <div class=t req="admin"><a href='SendMessage.htm'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='index.html###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='UserManage.htm'>用户管理</a></div>
+  <div class=t><a href='ProblemAdmin.htm'>试题管理</a></div>
+  <div class=t><a href='rejudge.htm'>试题复评</a></div>
+  <div class=t><a href='ChangeUPwd.htm'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='resources.htm'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="help.htm">帮助</a>
+ <div class="drop">
+  <div class=t><a href='help.htm' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='updates.htm' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="FindPassword.htm">忘记密码</a> &nbsp;
+其他登录：<a href="index.html###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="index.html###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="index.html###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<div id="userti" style="display:none;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr valign="top"><td>
+<h2><br /></h2>
+<div id="tadduser" style="display:none">
+<h4 style="color:red;">添加用户</h4>
+<div style="margin-left:20px; margin-top:5px; margin-bottom:30px; ">
+课程内的用户还不足10人，您可能还没有把您的学生添加到课程中来。<br />
+您可以通过菜单的“用户列表”中的“<a href="AddUsersCsv.htm">添加用户</a>”来加入您的学生，添加用户时需要您将用户列表放入到一个以逗号分隔的csv文件（使用Excel可以生成这个文件）中。<br />
+您也可以按照我们提供的格式手动把用户添加进来，这里您需要使用“<a href="AddUsers.htm">手动添加用户</a>”这个页面。
+</div>
+</div>
+
+<div id="setassignment" style="display:none">
+<h4 style="color:red;">布置作业</h4>
+<div style="margin-left:20px; margin-top:5px; margin-bottom:30px; ">
+您现在布置的作业还不足3次，您可能还不太清楚如果给学生布置作业。<br />
+您需要从我们的题库中选择试题布置作业给学生，学生才能看到您想让他们完成的试题。<br />
+要布置一次作业，您可以点击菜单的“试题、作业与考试”中的“<a href="http://www.tsinsen.com/AssignManage.htm">作业与考试管理</a>”，在该页面中点击“<a href="http://www.tsinsen.com/AssignmentA.htm">布置题库作业</a>”，在界面中填写作业名称（如“作业1”），选择需要完成作业的学生分组，在右侧的题库中搜索选择试题点击“加入”加入到作业的试题列表中，最后点击提交完成作业的布置。
+</div>
+</div>
+
+<div id="viewassignment" style="display:none">
+<h4 style="color:red;">查看作业完成情况</h4>
+<div style="margin-left:20px; margin-top:5px; margin-bottom:30px; ">
+您是否对学生作业的完成情况感兴趣，点击下面的链接直接查看最近的几次作业的完成情况：<br />
+<div id="assignlist"></div><br />
+您还您可以点击菜单的“试题、作业与考试”中的“<a href="http://www.tsinsen.com/AssignManage.htm">作业与考试管理</a>”来查看所有作业的完成情况。
+</div>
+</div>
+
+<div id="doassignment" style="display:none">
+<h4 style="color:red;">完成作业</h4>
+<div style="margin-left:20px; margin-top:5px; margin-bottom:30px; ">
+你最近的一次编程作业的完成情况如下所示：
+<div id="assprobs"></div>
+你可以点击击菜单的“试题、作业与考试”中的"<a href="http://www.tsinsen.com/MyAssignment.htm">我的作业</a>"来查看所有作业的完成情况。
+</div>
+</div>
+<div>
+<h4 style="color:red;"></h4>
+<div style="margin-left:20px; margin-top:5px; margin-bottom:30px; ">
+&nbsp;
+</div>
+</div>
+</td><td width="2%"></td><td width="48%">
+<div style="text-align:right; display:none;" id="sendnoticediv"><a href="http://www.tsinsen.com/SendNotice.htm">发布公告</a></div>
+<div id="domainmsg"></div></td></tr>
+</table>
+
+<hr />
+
+</div>
+<script type="text/javascript">
+function checks(me)
+{
+	if (me.isUser) e("userti").style.display = "block";
+	if (me.isAdmin)
+	{
+		e("sendnoticediv").style.display = "block";
+		{
+		
+			var obj = {};
+		//portxd("/user.GroupList.dt",{},function(obj){
+			var tt = 0;
+			for (var i=0;;++i)
+			{
+				var vv = obj[""+i];
+				if (!vv) break;
+				tt += parseInt(vv["cnt"]);
+			}
+			if (tt<10)
+				e("tadduser").style.display="block";
+		//});
+		}
+		{
+		
+		
+			var obj = {};
+		//portxd("/assignment.AssignmentManage.dt",{},function(obj){
+			var cont = e("assignlist");
+			port_samh(cont, obj);
+		
+			if (obj[""+0]!=null)
+				e("viewassignment").style.display="block";
+			if (obj[""+2]==null)
+				e("setassignment").style.display="block";
+		//});
+		}
+	}
+}
+checks(getUserInfo());
+
+function showcontest() {
+	
+	var obj = {};
+	//portxd("/assignment.MyAssignments.dt", {}, onLoadProbs );
+	onLoadProbs(obj);
+}
+function reloadcontest() { showcontest(); }
+function onLoadProbs(obj) {
+	var vv = e("assprobs");
+	var cont = null;
+	for (var i = 0; ; ++i)
+	{
+		cur = obj[i];
+		if (cur){
+			if (cur["type"]=="编程")
+				cont = cur;
+		} else break;
+	}
+	if (cont!=null)
+	{
+		port_assignmentList(vv, cont, true);
+		e("doassignment").style.display="block";
+	}
+}
+showcontest();
+
+function showDomainMessage() {
+	var _tar = e("domainmsg");
+	_tar.innerHTML = "";
+	portxd("/course.DomainMessage.dt", {cmd:"getmsg"}, function(_obj) {
+		if (!(_obj["ret"]=="1"))
+			return ;
+		for (var i = 0; ; ++i)
+		{
+			var _cu = _obj["n" + i];
+			if (!_cu) break;
+			function _addI(_cu)
+			{
+				var _td = newT(null, _tar, "domainmsg");
+				newT(null, _td, "tit", _cu["title"]);
+				newT("span", newT(null, _td, "meta", _cu["posttime"] + " &nbsp; &nbsp; "), "del", "删除").onclick = function() {
+					portxd("/course.DomainMessage.dt", {cmd:"delmsg",id:_cu["id"]}, function() {
+						showDomainMessage();
+					});
+				};
+				newT(null, _td, "cont", _cu["content"]);
+			}
+			_addI(_cu);
+		}
+	});
+}
+showDomainMessage();
+</script>
+<style>
+.domainmsg { margin:0px 0px 16px 0px; }
+.domainmsg .tit { font-family:"Comic Sans MS", "微软雅黑", "黑体"; font-size:12px; font-weight:bold; }
+.domainmsg .del { text-decoration:underline; color:#06F; cursor:pointer; }
+.domainmsg .meta { font-family:Arial, "宋体"; font-size:12px; font-weight:normal; margin:0px 0px 0px 20px; }
+.domainmsg .cont { font-family:Arial, "宋体"; font-size:12px; font-weight:normal; margin:4px 0px 0px 20px; }
+</style>
+<div class="vspace">
+<p>	欢迎进入清橙网络自动评测系统。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div style="text-align:center;">
+	<a href="http://www.tsinsen.com/new/" class="button" style="
+		    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+        text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+        touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+        background-image: none;
+    border: 1px solid transparent;
+    padding: 20px 36px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+		">试用新版</a>
+</div>
+<p>&nbsp;</p>
+<p class="Impo2">&nbsp;</p>
+清橙网络自动评测系统向高校老师和高中信息学奥林匹克教练提供免费的评测和管理服务。 使清橙网络自动评测系统，你可以：
+<ul>
+<li>添加和管理自己的学生</li>
+<li>添加和管理自己的试题</li>
+<li>查看和使用其他老师共享的试题</li>
+<li>给学生布置作业，并实时查看学生的作业完成情况</li>
+</ul>
+<br />
+本站管理员邮箱：<a href="mailto:support@tsinsen.com">support@tsinsen.com</a>。
+</div>
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

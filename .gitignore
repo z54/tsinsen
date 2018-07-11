@@ -1,4 +1,35 @@
+*.exe
+*.url
+*-workspace
+
+test*.*
+model.c
+
 .git
 .vscode
 
-tsinsen.com
+# tsinsen.com
+*.htm
+!A*.htm
+# useless
+tsinsen.com/images/help
+# 空子文件夹
+tsinsen.com/- + -
+tsinsen.com/course
+tsinsen.com/downloads
+tsinsen.com/Forum
+tsinsen.com/help
+tsinsen.com/poj.org
+tsinsen.com/resources
+tsinsen.com/api.weibo.com/2/oauth2
+tsinsen.com/codeforces.com/contest
+tsinsen.com/graph.qq.com/oauth2.0
+tsinsen.com/graph.renren.com/oauth
+tsinsen.com/new/domain
+tsinsen.com/new/problem
+tsinsen.com/new/user
+tsinsen.com/service.weibo.com/share
+tsinsen.com/sns.qzone.qq.com/cgi-bin/qzshare
+tsinsen.com/widget.renren.com/dialog
+tsinsen.com/zh.wikipedia.org/w
+tsinsen.com/zh.wikipedia.org/wiki

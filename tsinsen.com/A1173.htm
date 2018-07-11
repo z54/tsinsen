@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+
+<title>A1173. 道路游戏 -NOIP2009 普及组- Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"38092","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="http://www.tsinsen.com/" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="/">首页</a>
+ <div class="drop">
+  <div class=t><a href='/' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="/ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='/ProblemArchive.page' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='/ASelect.page'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="/AllSubmits.page?type=a">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='/AllSubmits.page?type=a' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='/AssignManage.page'>作业管理</a></div>
+  <div class=t><a href='/MyAssignment.page'>我的作业</a></div>
+  <div class=t><a href='/Problemlist.page'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/DiskView.page?type=d'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='/AUsers.page'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/DomainChange.page'>课程切换</a></div>
+  <div class=t><a href='/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='/ProblemManage.page'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/ChangePwd.page'>修改密码</a></div>
+  <div class=t><a href='/MyMessages.page'>我的消息</a></div>
+  <div class=t req="admin"><a href='/SendMessage.page'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='/UserManage.page'>用户管理</a></div>
+  <div class=t><a href='/ProblemAdmin.page'>试题管理</a></div>
+  <div class=t><a href='/rejudge.page'>试题复评</a></div>
+  <div class=t><a href='/ChangeUPwd.page'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='/resources.page'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="/help.page">帮助</a>
+ <div class="drop">
+  <div class=t><a href='/help.page' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='/updates.page' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="/FindPassword.page">忘记密码</a> &nbsp;
+其他登录：<a href="###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<div class="probtitle" id="ptit">A1173. 道路游戏</div>
+<div style="text-align:center; font-size:14px; vertical-align:middle;" id="pres">
+<div style="font-weight:bold; margin:8px 0px 6px 0px; ">时间限制：<span class="uline">1.0s</span> &nbsp; 内存限制：<span class="uline">64.0MB</span> &nbsp; <span id="subinterdiv"></span><span id="probtypediv"></span><span class="uline"></span></div>
+<div>总提交次数：<b><a href="/AllSubmits.page?type=a&gpid=A1173,D3766,D4075,D4076,D4384,D6252,D6261,D13498,P1461"></a></b> &nbsp; AC次数：<b></b> &nbsp; 平均分：<b></b></div>
+<div id="inputoutput"></div>
+</div>
+<div class="ralign" style="margin:20px 0 20px 0;"><div class="inl vmid">将本题分享到：</div><div class="inl vmid"><a class="share_renren" title="分享到人人网" onclick="renrenShareClick()"></a> &nbsp; <a class="share_qq" title="分享到QQ空间" onclick="qqShareClick()"></a> &nbsp; <a class="share_weibo" title="分享到新浪微博" onclick="weiboShareClick()"></a></div> &nbsp; <div class="inl vmid"><a href="###" onclick="formatChange()" id="fcl">查看未格式化的试题</a> &nbsp; <a href="###" onclick="showSubmit()">提交</a> &nbsp; <a href="###" onclick="discussProblem()">试题讨论</a></div></div>
+<div id="psrc" style="margin-top:20px; display:none;">
+<div class="pdsec">试题来源</div><div class="pdcont">　　NOIP2009 普及组</div>
+</div>
+<div id="pinputs" style="display:none; ">
+<div class="pdsec">输入数据</div>
+<div class="pdcont"><span class="notice">　　这是一道提交答案的试题，下面给出了该题的输入数据：</span></div>
+<div id="inputlist" class="pddata">
+</div>
+</div>
+<div id="pcont1" style="margin-top:20px; display:block;">
+<div class='pdsec'>问题描述</div><div class='pdcont'>　　小新正在玩一个简单的电脑游戏。 游戏中有一条环形马路，马路上有n 个机器人工厂，两个相邻机器人工厂之间由一小段 马路连接。小新以某个机器人工厂为起点，按顺时针顺序依次将这n 个机器人工厂编号为 1~n，因为马路是环形的，所以第n 个机器人工厂和第1 个机器人工厂是由一段马路连接在 一起的。小新将连接机器人工厂的这n 段马路也编号为1~n，并规定第i 段马路连接第i 个 机器人工厂和第i+1 个机器人工厂（1 ≤ i ≤ n-1），第n 段马路连接第n 个机器人工厂和第1 个机器人工厂。 游戏过程中，每个单位时间内，每段马路上都会出现一些金币，金币的数量会随着时间 发生变化，即不同单位时间内同一段马路上出现的金币数量可能是不同的。小新需要机器人 的帮助才能收集到马路上的金币。所需的机器人必须在机器人工厂用一些金币来购买，机器 人一旦被购买，便会沿着环形马路按顺时针方向一直行走，在每个单位时间内行走一次，即 从当前所在的机器人工厂到达相邻的下一个机器人工厂，并将经过的马路上的所有金币收集 给小新，例如，小新在i（1 ≤ i ≤ n）号机器人工厂购买了一个机器人，这个机器人会从i 号 机器人工厂开始，顺时针在马路上行走，第一次行走会经过i 号马路，到达i+1 号机器人工 厂（如果i=n，机器人会到达第1 个机器人工厂），并将i 号马路上的所有金币收集给小新。 游戏中，环形马路上不能同时存在2 个或者2 个以上的机器人，并且每个机器人最多能 够在环形马路上行走p 次。小新购买机器人的同时，需要给这个机器人设定行走次数，行走 次数可以为1~p 之间的任意整数。当马路上的机器人行走完规定的次数之后会自动消失，小 新必须立刻在任意一个机器人工厂中购买一个新的机器人，并给新的机器人设定新的行走次 数。 以下是游戏的一些补充说明： 1. 游戏从小新第一次购买机器人开始计时。 2. 购买机器人和设定机器人的行走次数是瞬间完成的，不需要花费时间。 3. 购买机器人和机器人行走是两个独立的过程，机器人行走时不能购买机器人，购买 完机器人并且设定机器人行走次数之后机器人才能行走。 4. 在同一个机器人工厂购买机器人的花费是相同的，但是在不同机器人工厂购买机器 人的花费不一定相同。 5. 购买机器人花费的金币，在游戏结束时再从小新收集的金币中扣除，所以在游戏过 程中小新不用担心因金币不足，无法购买机器人而导致游戏无法进行。也因为如此， 游戏结束后，收集的金币数量可能为负。 现在已知每段马路上每个单位时间内出现的金币数量和在每个机器人工厂购买机器人 需要的花费，请你告诉小新，经过m 个单位时间后，扣除购买机器人的花费，小新最多能 收集到多少金币。</div><div class='pdsec'>输入格式</div><div class='pdcont'>　　第一行 3 个正整数，n，m，p，意义如题目所述。 接下来的 n 行，每行有m 个正整数，每两个整数之间用一个空格隔开，其中第i 行描 述了i 号马路上每个单位时间内出现的金币数量（1 ≤ 金币数量≤ 100），即第i 行的第j （1 ≤ j ≤m）个数表示第j 个单位时间内i 号马路上出现的金币数量。 最后一行，有 n 个整数，每两个整数之间用一个空格隔开，其中第i 个数表示在i 号机 器人工厂购买机器人需要花费的金币数量（1 ≤ 金币数量≤ 100）。</div><div class='pdsec'>输出格式</div><div class='pdcont'>　　共一行，包含1 个整数，表示在m 个单位时间内，扣除购买机器人 花费的金币之后，小新最多能收集到多少金币。</div><div class='pdsec'>样例输入</div><div class='pddata'>2 3 2<br />
+1 2 3<br />
+2 3 4<br />
+1 2</div><div class='pdsec'>样例输出</div><div class='pddata'>5</div><div class='pdsec'>数据规模和约定</div><div class='pdcont'>　　对于 40%的数据，2 ≤ n ≤ 40，1 ≤m≤ 40。<br />
+　　对于 90%的数据，2 ≤ n ≤ 200，1 ≤m≤ 200。<br />
+　　对于 100%的数据，2 ≤ n ≤ 1000，1 ≤m≤ 1000，1 ≤ p ≤m</div>
+
+</div>
+<div id="pcont2" style="margin-top:20px; display:none;">
+<h2 id="aeaoofnhgocdbnbeljkmbjdmhbcokfdb-mousedown" style="color: blue; font-family: 'Times New Roman'; ">Description</h2>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">小新正在玩一个简单的电脑游戏。 游戏中有一条环形马路，马路上有n 个机器人工厂，两个相邻机器人工厂之间由一小段 马路连接。小新以某个机器人工厂为起点，按顺时针顺序依次将这n 个机器人工厂编号为 1~n，因为马路是环形的，所以第n 个机器人工厂和第1 个机器人工厂是由一段马路连接在 一起的。小新将连接机器人工厂的这n 段马路也编号为1~n，并规定第i 段马路连接第i 个 机器人工厂和第i+1 个机器人工厂（1 &le; i &le; n-1），第n 段马路连接第n 个机器人工厂和第1 个机器人工厂。 游戏过程中，每个单位时间内，每段马路上都会出现一些金币，金币的数量会随着时间 发生变化，即不同单位时间内同一段马路上出现的金币数量可能是不同的。小新需要机器人 的帮助才能收集到马路上的金币。所需的机器人必须在机器人工厂用一些金币来购买，机器 人一旦被购买，便会沿着环形马路按顺时针方向一直行走，在每个单位时间内行走一次，即 从当前所在的机器人工厂到达相邻的下一个机器人工厂，并将经过的马路上的所有金币收集 给小新，例如，小新在i（1 &le; i &le; n）号机器人工厂购买了一个机器人，这个机器人会从i 号 机器人工厂开始，顺时针在马路上行走，第一次行走会经过i 号马路，到达i+1 号机器人工 厂（如果i=n，机器人会到达第1 个机器人工厂），并将i 号马路上的所有金币收集给小新。 游戏中，环形马路上不能同时存在2 个或者2 个以上的机器人，并且每个机器人最多能 够在环形马路上行走p 次。小新购买机器人的同时，需要给这个机器人设定行走次数，行走 次数可以为1~p 之间的任意整数。当马路上的机器人行走完规定的次数之后会自动消失，小 新必须立刻在任意一个机器人工厂中购买一个新的机器人，并给新的机器人设定新的行走次 数。 以下是游戏的一些补充说明： 1. 游戏从小新第一次购买机器人开始计时。 2. 购买机器人和设定机器人的行走次数是瞬间完成的，不需要花费时间。 3. 购买机器人和机器人行走是两个独立的过程，机器人行走时不能购买机器人，购买 完机器人并且设定机器人行走次数之后机器人才能行走。 4. 在同一个机器人工厂购买机器人的花费是相同的，但是在不同机器人工厂购买机器 人的花费不一定相同。 5. 购买机器人花费的金币，在游戏结束时再从小新收集的金币中扣除，所以在游戏过 程中小新不用担心因金币不足，无法购买机器人而导致游戏无法进行。也因为如此， 游戏结束后，收集的金币数量可能为负。 现在已知每段马路上每个单位时间内出现的金币数量和在每个机器人工厂购买机器人 需要的花费，请你告诉小新，经过m 个单位时间后，扣除购买机器人的花费，小新最多能 收集到多少金币。</div>
+<h2 style="color: blue; font-family: 'Times New Roman'; ">【输入格式】</h2>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">第一行 3 个正整数，n，m，p，意义如题目所述。 接下来的 n 行，每行有m 个正整数，每两个整数之间用一个空格隔开，其中第i 行描 述了i 号马路上每个单位时间内出现的金币数量（1 &le; 金币数量&le; 100），即第i 行的第j （1 &le; j &le;m）个数表示第j 个单位时间内i 号马路上出现的金币数量。 最后一行，有 n 个整数，每两个整数之间用一个空格隔开，其中第i 个数表示在i 号机 器人工厂购买机器人需要花费的金币数量（1 &le; 金币数量&le; 100）。</div>
+<h2 style="color: blue; font-family: 'Times New Roman'; ">【输出格式】</h2>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">共一行，包含1 个整数，表示在m 个单位时间内，扣除购买机器人 花费的金币之后，小新最多能收集到多少金币。</div>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">【样例输入】</div>
+<h2 style="color: blue; font-family: 'Times New Roman'; ">&nbsp;</h2>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; "><span class="sampledata" style="white-space: pre; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgb(141, 184, 255); font-size: 18px; font-family: monospace; background-position: initial initial; background-repeat: initial initial; ">2 3 2<br />
+1 2 3<br />
+2 3 4<br />
+1 2</span></div>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">【样例输出】</div>
+<h2 style="color: blue; font-family: 'Times New Roman'; ">&nbsp;</h2>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">5</div>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; "><span style="direction: ltr; ">【数据范围】</span></div>
+<div class="content" style="height: auto; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 20px; padding-bottom: 0px; padding-left: 20px; font-size: 14px; font-family: 'Times New Roman'; text-align: left; ">
+<p>对于 40%的数据，2 &le; n &le; 40，1 &le;m&le; 40。<br />
+对于 90%的数据，2 &le; n &le; 200，1 &le;m&le; 200。<br />
+对于 100%的数据，2 &le; n &le; 1000，1 &le;m&le; 1000，1 &le; p &le;m</p>
+</div>
+<!--EndFragment-->
+</div>
+<br />
+<div id="pcode" class="code">
+<div id="pcodesu" style="display:none;">
+<hr />
+<span class='notice'>这是一道完善程序的试题，你只需要在下面程序标注的"<span class='code'><span class="Y">@你的代码</span></span>"的位置补充适当的语句或语句段使程序能正确运行即可，在提交的时候，你要提交的内容只包括补充的内容，不包括其他的代码。</span>
+</div>
+</div>
+
+<div class="ralign"><a href="###" onclick="showSubmit()">提交</a> &nbsp; <a href="###" onclick="discussProblem()">试题讨论</a></div>
+<script type="text/javascript">
+
+var viewType = "f";
+_codeLines = document.createElement("OL");
+e("pcode").appendChild(_codeLines);
+function getGPID() {
+	return "A1173";
+}
+var gpid = getGPID();
+function getProbTitle() {
+	return "道路游戏";
+}
+function getProbType() {
+	return "DEFAULT";
+}
+function getProbContent() { return e("pcont1").innerHTML; }
+function getSrc() {
+	return "NOIP2009 普及组";
+}
+function getCode() {
+	return "";
+}
+function getLangs() {
+	return "CPP,C0X,VC9,C,JAVA,PAS,CS";
+}
+function getInDataCount() {
+	return "0";
+}
+function getInputFileName() {
+	return "";
+}
+function getOutputFileName() {
+	return "";
+}
+function getSubinter() {
+	var inter = "0";
+	var iint = parseInt(""+inter);
+	if (!(iint>0))
+		return 0;
+	return iint;
+}
+function getRemain() {
+	var remain = "0";
+	var iremain = parseInt(""+remain);
+	if (!(iremain>0))
+		return 0;
+	return iremain;
+}
+
+function initProb()
+{
+	if (getSrc() && getSrc()!="")
+		e("psrc").style.display = "block";
+	var cod = getCode();
+	if (cod && cod.indexOf("@你的代码")>=0)
+	{
+		e("pcodesu").style.display = "block";
+		port_fc(cod, addline);
+	}
+	if (getSubinter()>0)
+	{
+		var rem = getRemain();
+		var intervalVar;
+		var startT = new Date().getTime();
+		function setSubInt()
+		{
+			var passT = Math.floor((new Date().getTime() - startT) / 1000);
+			var crem = rem - passT;
+			var minu = Math.floor(crem/60); var sec = crem - minu*60;
+			var subTxt = "";
+			if (crem<=0)
+				subTxt = "<span class=gcolor>现在可以提交</span>";
+			else
+				subTxt = "<span class=rcolor>还剩" + (minu>0?minu+"分":"") + sec + "秒</span>";
+			var html = "代码提交间隔：<span class='uline'>" + getSubinter() + "分钟(" + subTxt + ")</span> &nbsp; ";
+			e("subinterdiv").innerHTML = html;
+			if (crem <= 0)
+			{
+				clearInterval(intervalVar);
+			}
+		}
+		intervalVar = setInterval(setSubInt, 1000);
+		setSubInt();
+	}
+	if (getProbType()=="SUBMIT")
+	{
+		e("probtypediv").innerHTML = "<span class='uline'>提交答案型</span> &nbsp; ";
+		e("pinputs").style.display = "block";
+		var inCnt = parseInt(getInDataCount());
+		var _dlist = newT("UL", e("inputlist"));
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "下载全部");
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1173",dataid:"all"},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+		newT("br", _dlist);
+		for (var i = 0; i < inCnt; ++i)
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "input" + (i+1) + ".txt");
+			ca.dataId = i+1;
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1173",dataid:this.dataId},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+	}
+	var inpName = getInputFileName(), outName = getOutputFileName();
+	var inOutStr = "";
+	if (inpName && inpName!="")
+	{
+		inOutStr = "输入文件名：<b>" + inpName + "</b>";
+	}
+	if (outName && outName!="")
+	{
+		if (inOutStr != "")
+			inOutStr += " &nbsp; ";
+		inOutStr += "输出文件名：<b>" + outName + "</b>";
+	}
+	e("inputoutput").innerHTML = inOutStr;
+}
+
+initProb();
+
+function weiboShareClick() {
+	var _w = 16 , _h = 16;
+	var param = {
+		url:location.href,
+		type:'3',
+		count:'', /**是否显示分享数，1显示(可选)*/
+		appkey:'1707773381', /**您申请的应用appkey,显示分享来源(可选)*/
+		title:"试题 "+getProbTitle(), /**分享的文字内容(可选，默认为所在页面的title)*/
+		pic:'http://www.tsinsen.com/images/tsinsen100.png', /**分享图片的路径(可选)*/
+		ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+		language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+		rnd:new Date().valueOf()
+	}
+	rrShareOnclick(param, "http://service.weibo.com/share/share.php");
+}
+
+function qqShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		url:location.href,
+		showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+		desc:'',/*默认分享理由(可选)*/
+		summary:cont,/*分享摘要(可选)*/
+		title:getProbTitle(),/*分享标题(可选)*/
+		site:'清橙网络自动评测系统',/*分享来源 如：腾讯网(可选)*/
+		pics:'http://www.tsinsen.com/images/tsinsen100.png', /*分享图片的路径(可选)*/
+		style:'203',
+		width:22,
+		height:22
+	};
+	rrShareOnclick(param, "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey");
+}
+
+function renrenShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		resourceUrl : '',	//分享的资源Url
+		pic : 'http://www.tsinsen.com/images/tsinsen100.png',		//分享的主题图片Url
+		title :getProbTitle(),		//分享的标题
+		description : cont	//分享的详细描述
+	};
+	rrShareOnclick(param);
+}
+
+var lineNum = 0;
+function addline(st) { newT("LI", _codeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", '<span class="Y">@你的代码</span>')); }
+
+function OnUploadCompleted(ret, fn, msg)
+{
+	if (ret+""=="1")
+	{
+		setData("lastsubtype", "FILE");
+		portxd("/test.SubmitCode.dt", {gpid:gpid,codefn:msg}, function(obj){
+			if (""+obj["ret"]=="1")
+			{
+				window.location.href = "/AllSubmits.page?type=a";
+			}
+			else
+			{
+				alert(obj["msg"]);
+				showSubmit();
+			}
+		});
+	}
+	else
+	{
+		alert(msg);
+		showSubmit();
+	}
+}
+
+function showSubmit()
+{
+	var cc = getCode();
+	var canUseFile = (cc==null)||(cc=="");
+	var isSubmit = (getProbType()=="SUBMIT");
+	var canUsePaste = !isSubmit;
+	var _langs;
+	var _pop = createPopWin("提交代码", function(gdiv){
+		var divS = newT("", gdiv, "vsp");
+		
+		var fdiv = newT("", gdiv);
+		newT("", fdiv, "", '<iframe id="dataupf" src="/CommonFileUpload.page" style="width:220px; height:40px; margin:0px; padding:0px; border:0px; "></iframe>');
+		
+		var div = newT("", gdiv);
+		
+		fdiv.style.display = "none";
+		div.style.display = "block";
+		
+		function setDivS1()
+		{
+			if (!canUsePaste && canUseFile)
+			{
+				setDivS2()
+				return ;
+			}
+			fdiv.style.display = "none";
+			div.style.display = "block";
+			divS.innerHTML = "";
+			var l1 = newT("span", divS, "", "<b>* 粘贴代码提交</b>");
+			if (canUseFile)
+			{
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+				
+				var l2 = newT("a", divS, "", "上传文件提交");
+				l2.href = "###";
+				l2.onclick = function() {
+					setDivS2();
+				};
+			}
+		}
+		function toLangDesc(lang)
+		{
+			if (lang=="CPP") return "C++ (MinGW g++ 4.7.2)";
+			if (lang=="C") return "C (MinGW gcc 4.7.2)";
+			if (lang=="C0X") return "C++0x (MinGW g++ 4.7.2 --std=c++0x)";
+			if (lang=="VC9") return "VC (Microsoft Visual C++ 2008)";
+			if (lang=="PAS") return "PAS (Free Pascal Compiler 2.4.0)";
+			if (lang=="CS") return "C# (Microsoft .NET 3.5)";
+			if (lang=="JAVA") return "Java (Java 1.7.0_15)";
+			if (lang=="RUBY") return "Ruby (Ruby 1.8.6)";
+			if (lang=="PERL") return "Perl (Perl v5.16.3)";
+			if (lang=="PYTHON") return "Python (Python 3.3.0)";
+			if (lang=="PYTHON27") return "Python (Python 2.7.3)";
+			if (lang=="PHP") return "PHP (PHP 5.4.13)";
+			return lang;
+		}
+		function setDivS2()
+		{
+			if (canUsePaste && !canUseFile)
+			{
+				setDivS1()
+				return ;
+			}
+			div.style.display = "none";
+			fdiv.style.display = "block";
+			divS.innerHTML = "";
+			if (canUsePaste)
+			{
+				var l1 = newT("a", divS, "", "粘贴代码提交");
+				l1.href = "###";
+				l1.onclick = function() {
+					setDivS1();
+				};
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+			}
+			var l2 = newT("span", divS, "", "<b>* 上传文件提交</b>");
+			if (isSubmit)
+			{
+				newT("", divS, "", "这是一道提交答案的试题，请将<b>output*.txt</b>打包在一起后提交。");
+			}
+		}
+		var prevsubtype = getData("lastsubtype");
+		if (prevsubtype == "FILE")
+			setDivS2();
+		else
+			setDivS1();
+		
+		var _lang = newT(null, div, "smallsp", "语言选择：");
+		_langs = newT("select", _lang);
+
+		var langs = getLangs();
+		var langss = langs.split(",");
+		_langs.options.length = 0;
+		for (la in langss)
+			_langs.options.add(new Option(toLangDesc(langss[la]), langss[la]));
+
+		try {
+			var prevlang = getData("lastlang");
+			if (prevlang)
+			{
+				for (var i = 0; i < _langs.options.length; i++)
+					if (_langs.options[i].value == prevlang)
+						_langs.options[i].selected = true;
+			}
+		} catch ( errx ) {};
+
+		var _code = newT(null, div, "code");
+		var _curcode = getCode() || "";
+		var lineNum = 0;
+		if (_curcode && _curcode.indexOf("@你的代码")>=0)
+		{
+			var _scodeLines = newT("OL", _code);
+			port_fc(_curcode, function(st){ newT("LI", _scodeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", "<textarea name='code' id='code' class='code' style='height:200px;width:600px;'></textarea>")); });
+		}
+		else
+			_code.innerHTML = "<textarea name='code' id='code' class='code' style='height:430px;width:660px;'></textarea>";
+		var _btns = newT("", div, "btns");
+		var _okBtn = createButton(_btns, "提交", function() {
+			var vgpid = gpid;
+			var vlang = _langs.value;
+			var vcode = e("code").value;
+			if (vcode=="")
+			{
+				alert("请输入要提交的程序。");
+				_okBtn.enableClick();
+				return true;
+			}
+			else
+			{
+				setData("lastsubtype", "CODE");
+				portxd("/test.SubmitCode.dt", {gpid:vgpid,lang:vlang,code:vcode}, function(obj){
+					setData("lastlang", vlang);
+					if (""+obj["ret"]=="1")
+					{
+						window.location.href = "/AllSubmits.page?type=a";
+					}
+					else
+					{
+						alert(obj["msg"]);
+						_okBtn.enableClick();
+					}
+				});
+			}
+			return false;
+		});
+		var _closeBtn = createButton(_btns, "关闭", function() { _pop.doHide(); });
+	}, "", function(){}, 800);
+}
+function formatChange()
+{
+	if (viewType == "f")
+	{
+		viewType = "p";
+		e("pcont1").style.display = "none";
+		e("pcont2").style.display = "block";
+		e('fcl').innerHTML = "查看格式化的试题";
+	}
+	else
+	{
+		viewType = "f";
+		e("pcont2").style.display = "none";
+		e("pcont1").style.display = "block";
+		e('fcl').innerHTML = "查看未格式化的试题";
+	}
+}
+function discussProblem() { location.href = "/Forum/Index.page?gpid=" + gpid; }
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+  	inlineMath: [ ['$'+'$','$'+'$'], ['\\(','\\)']],
+  	displayMath: [ ['\\[','\\]'] ]
+  }
+});
+</script>
+<script type="text/javascript" src="/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

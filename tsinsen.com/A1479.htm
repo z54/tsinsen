@@ -1,0 +1,844 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="http://www.tsinsen.com/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+
+<title>A1479. 猴子大战 -CTSC 2013 第二试- Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"36945","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="www_tsinsen_default.html" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="www_tsinsen_default.html">首页</a>
+ <div class="drop">
+  <div class=t><a href='www_tsinsen_default.html' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='ProblemArchive.htm' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='ASelect.htm'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="AllSubmits.htm">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='AllSubmits.htm' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='AssignManage.htm'>作业管理</a></div>
+  <div class=t><a href='MyAssignment.htm'>我的作业</a></div>
+  <div class=t><a href='Problemlist.htm'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DiskView.htm'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='AUsers.htm'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DomainChange.htm'>课程切换</a></div>
+  <div class=t><a href='http://www.tsinsen.com/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='http://www.tsinsen.com/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='ProblemManage.htm'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ChangePwd.htm'>修改密码</a></div>
+  <div class=t><a href='MyMessages.htm'>我的消息</a></div>
+  <div class=t req="admin"><a href='SendMessage.htm'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='A1479.htm###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='UserManage.htm'>用户管理</a></div>
+  <div class=t><a href='ProblemAdmin.htm'>试题管理</a></div>
+  <div class=t><a href='rejudge.htm'>试题复评</a></div>
+  <div class=t><a href='ChangeUPwd.htm'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='resources.htm'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="help.htm">帮助</a>
+ <div class="drop">
+  <div class=t><a href='help.htm' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='updates.htm' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="FindPassword.htm">忘记密码</a> &nbsp;
+其他登录：<a href="A1479.htm###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="A1479.htm###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="A1479.htm###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<div class="probtitle" id="ptit">A1479. 猴子大战</div>
+<div style="text-align:center; font-size:14px; vertical-align:middle;" id="pres">
+<div style="font-weight:bold; margin:8px 0px 6px 0px; ">时间限制：<span class="uline">2.0s</span> &nbsp; 内存限制：<span class="uline">256.0MB</span> &nbsp; <span id="subinterdiv"></span><span id="probtypediv"></span><span class="uline">Special Judge</span></div>
+<div>总提交次数：<b><a href="http://www.tsinsen.com/AllSubmits.page?type=a&amp;gpid=A1479,D9681,P3185"></a></b> &nbsp; AC次数：<b></b> &nbsp; 平均分：<b></b></div>
+<div id="inputoutput"></div>
+</div>
+<div class="ralign" style="margin:20px 0 20px 0;"><div class="inl vmid">将本题分享到：</div><div class="inl vmid"><a class="share_renren" title="分享到人人网" onclick="renrenShareClick()"></a> &nbsp; <a class="share_qq" title="分享到QQ空间" onclick="qqShareClick()"></a> &nbsp; <a class="share_weibo" title="分享到新浪微博" onclick="weiboShareClick()"></a></div> &nbsp; <div class="inl vmid"><a href="http://www.tsinsen.com/A1479.htm###" onclick="formatChange()" id="fcl">查看未格式化的试题</a> &nbsp; <a href="http://www.tsinsen.com/A1479.htm###" onclick="showSubmit()">提交</a> &nbsp; <a href="http://www.tsinsen.com/A1479.htm###" onclick="discussProblem()">试题讨论</a></div></div>
+<div id="psrc" style="margin-top:20px; display:none;">
+<div class="pdsec">试题来源</div><div class="pdcont">　　CTSC 2013 第二试</div>
+</div>
+<div id="pinputs" style="display:none; ">
+<div class="pdsec">输入数据</div>
+<div class="pdcont"><span class="notice">　　这是一道提交答案的试题，下面给出了该题的输入数据：</span></div>
+<div id="inputlist" class="pddata">
+</div>
+</div>
+<div id="pcont1" style="margin-top:20px; display:block;">
+<div class='pdsec'>问题描述</div><div class='pdcont'>　　小Q和小M最近发明了一种卡牌游戏，叫猴子大战。<br />
+　　游戏最初小Q和小M各会获得一部分猴子牌。每局游戏，他们两个需要分别等概率地从自己的猴子牌中抽取一张进行战斗。获胜的一方将获得双方的猴子牌。如果一方获得了所有的猴子牌，则该方获得整场游戏的胜利。否则游戏将一直进行下去。<br />
+　　在进行了若干场比赛以后，小Q和小M算出了一张胜率表，为每两张猴子牌之间进行战斗双方获胜的概率。由于每场战斗一定会决出胜负，而且胜率不受先后顺序影响，因此对于任意的两张猴子牌A和B，A战胜B的概率加B战胜A的概率为1。<br />
+　　由于自己老是输给小M，小Q开始怀疑自己每次拿到的猴子牌是否能获得胜利。他希望求出自己拿到的每种猴子牌组合的获胜的概率。<br />
+　　由于小Q接下来还有在CD市体育中心数以万计的运动计划，因此这个问题只能交给你来解决了。</div><div class='pdsec'>输入格式</div><div class='pdcont'>　　输入的第一行包含两个正整数 n 和 m，表示猴子牌的总张数和需要求的猴子牌组合的个数。<br />
+　　接下来有 n 行，每行包含 n 个实数，每个实数保留了两位小数。这 n 行中，其中第 i 行第 j 列的数为 P_(i,j)，表示第 i 张猴子牌战胜第 j 张猴子牌的概率。保证P_(i,j)+P_(j,i)=1。特别地，P_(i,i)=0.5，没有特殊意义。<br />
+　　最后有 m 行。每行包含一个长度为 n 的无空格分隔的01串，表示一个猴子牌的组合。其中第 i 个字符如果为0，表示最初第 i 张牌在小M处，否则表示在小Q处。</div><div class='pdsec'>输出格式</div><div class='pdcont'>　　输出 m 行，每行一个实数，四舍五入保留八位小数，依次表示每个给定的猴子牌组合下小Q获胜的概率。</div><div class='pdsec'>样例输入</div><div class='pddata'>3 4<br />
+0.50 0.60 0.40<br />
+0.40 0.50 0.70<br />
+0.60 0.30 0.50<br />
+110<br />
+011<br />
+111<br />
+000</div><div class='pdsec'>样例输出</div><div class='pddata'>0.71304348<br />
+0.66086957<br />
+1.00000000<br />
+0.00000000</div><div class='pdsec'>评分方法</div><div class='pdcont'>　　你的答案的每一行如果与我们给定的参考答案的差别均不超过2×10^(-6)，则获得该测试点的得分，否则不得分。<br />
+　　参考答案保证与真实值的差别不超过10^(-8)，因此如果你输出的答案保证与真实值差别不超过2×10^(-6)-10^(-8)，才能保证正确。</div><div class='pdsec'>数据规模及约定</div><div class='pdcont'>　　对于每组数据，n的取值如下<br />
+<table cellspacing=0 cellpadding=2px style='border-collapse:collapse;' class='table table-striped table-horver'><tbody><tr  style='border:solid 1.0pt'><td style='border:solid 1.0pt'>测试点编号<br />
+</td><td style='border:solid 1.0pt'><i>n</i><br />
+</td><td style='border:solid 1.0pt'>测试点编号<br />
+</td><td style='border:solid 1.0pt'><i>n</i><br />
+</td></tr><tr  style='border:solid 1.0pt'><td style='border:solid 1.0pt'>1<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 2<br />
+</td><td style='border:solid 1.0pt'>6<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 20<br />
+</td></tr><tr  style='border:solid 1.0pt'><td style='border:solid 1.0pt'>2<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 5<br />
+</td><td style='border:solid 1.0pt'>7<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 40<br />
+</td></tr><tr  style='border:solid 1.0pt'><td style='border:solid 1.0pt'>3<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 7<br />
+</td><td style='border:solid 1.0pt'>8<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 60<br />
+</td></tr><tr  style='border:solid 1.0pt'><td style='border:solid 1.0pt'>4<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 8<br />
+</td><td style='border:solid 1.0pt'>9<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 80<br />
+</td></tr><tr  style='border:solid 1.0pt'><td style='border:solid 1.0pt'>5<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 10<br />
+</td><td style='border:solid 1.0pt'>10<br />
+</td><td style='border:solid 1.0pt'><i>n</i> = 100<br />
+</td></tr></tbody></table><br />
+　　对于100%的数据，保证1≤n≤100，1≤m≤n^2。0≤P_(i,j)≤1，P_(i,j)  恰好包含2位小数，且 P_(i,j)+P_(j,i)=1。表示猴子牌组合的01串长度均为 n，且不含其它字符。<br />
+　　P_(i,j )的生成方式为：在某个环境下，使用某个随机数种子，持续调用某语言生成整数的伪随机函数直到时钟函数达到1秒，接下来取连续的若干个随机函数值对101取模再除以100，作为输入数据中的满足 i&lt;j 的 P_(i,j)。该生成过程只启动一次，即不会出现看到数据以后重新生成数据的情况。以上操作的目的是希望P_(i,j)的每个取值几乎等概率且不受人控制，你可以不必理会这段话。</div>
+
+</div>
+<div id="pcont2" style="margin-top:20px; display:none;">
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【问题描述】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">小</span><span lang="EN-US">Q</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和小</span><span lang="EN-US">M</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">最近发明了一种卡牌游戏，叫猴子大战。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">游戏最初小</span><span lang="EN-US">Q</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和小</span><span lang="EN-US">M</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">各会获得一部分猴子牌。每局游戏，他们两个需要分别等概率地从自己的猴子牌中抽取一张进行战斗。获胜的一方将获得双方的猴子牌。如果一方获得了所有的猴子牌，则该方获得整场游戏的胜利。否则游戏将一直进行下去。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在进行了若干场比赛以后，小</span><span lang="EN-US">Q</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">和小</span><span lang="EN-US">M</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">算出了一张胜率表，为每两张猴子牌之间进行战斗双方获胜的概率。由于每场战斗一定会决出胜负，而且胜率不受先后顺序影响，因此对于任意的两张猴子牌</span><span lang="EN-US">A</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">和</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，</span><span lang="EN-US">A</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">战胜</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的概率加</span><span lang="EN-US">B</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">战胜</span><span lang="EN-US">A</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">的概率为</span><span lang="EN-US">1</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">由于自己老是输给小</span><span lang="EN-US">M</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，小</span><span lang="EN-US">Q</span><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">开始怀疑自己每次拿到的猴子牌是否能获得胜利。他希望求出自己拿到的每种猴子牌组合的获胜的概率。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">由于小</span><span lang="EN-US">Q</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接下来还有在</span><span lang="EN-US">CD</span><span style="font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">市体育中心数以万计的运动计划，因此这个问题只能交给你来解决了。</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【输入格式】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><font face="宋体">输入的第一行包含两个正整数 n 和 m，表示猴子牌的总张数和需要求的猴子牌组合的个数。</font></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><font face="宋体">接下来有 n 行，每行包含 n 个实数，每个实数保留了两位小数。这 n 行中，其中第 i 行第 j 列的数为 P_(i,j)，表示第 i 张猴子牌战胜第 j 张猴子牌的概率。保证P_(i,j)+P_(j,i)=1。特别地，P_(i,i)=0.5，没有特殊意义。</font></p>
+<p class="NOI0" style="margin-top: 0cm; text-indent: 24pt;"><font face="宋体">最后有 m 行。每行包含一个长度为 n 的无空格分隔的01串，表示一个猴子牌的组合。其中第 i 个字符如果为0，表示最初第 i 张牌在小M处，否则表示在小Q处。</font></p>
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【输出格式】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top:6.0pt;text-indent:24.0pt"><font face="宋体">输出 m 行，每行一个实数，四舍五入保留八位小数，依次表示每个给定的猴子牌组合下小Q获胜的概率。</font></p>
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【样例输入】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">3 4<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">0.50 0.60 0.40<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">0.40 0.50 0.70<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">0.60 0.30 0.50<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">110<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">011<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">111<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">000<o:p></o:p></span></p>
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【样例输出】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">0.71304348<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">0.66086957<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">1.00000000<o:p></o:p></span></p>
+<p class="NOI1"><span lang="EN-US">0.00000000<o:p></o:p></span></p>
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【评分方法】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI0" style="margin-top:6.0pt;text-indent:24.0pt">
+<p class="NOI0" style="margin-top:6.0pt;text-indent:24.0pt"><font face="宋体">你的答案的每一行如果与我们给定的参考答案的差别均不超过2&times;10^(-6)，则获得该测试点的得分，否则不得分。</font></p>
+<p class="NOI0" style="margin-top:6.0pt;text-indent:24.0pt"><font face="宋体">参考答案保证与真实值的差别不超过10^(-8)，因此如果你输出的答案保证与真实值差别不超过2&times;10^(-6)-10^(-8)，才能保证正确。</font></p>
+<div>&nbsp;</div>
+</p>
+<p class="NOI"><span style="font-family:黑体;mso-ascii-font-family:Arial;
+mso-ascii-theme-font:major-latin;mso-hansi-font-family:Arial;mso-hansi-theme-font:
+major-latin">【数据规模及约定】</span><span lang="EN-US"><o:p></o:p></span></p>
+<p class="NOI1"><span style="font-family:宋体;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-hansi-font-family:&quot;Courier New&quot;">对于每组数据，</span><font face="Calibri, sans-serif"><span style="font-size: 14px;">n</span></font><span style="font-family:
+宋体;mso-ascii-font-family:&quot;Courier New&quot;;mso-hansi-font-family:&quot;Courier New&quot;">的取值如下</span><span lang="EN-US"><o:p></o:p></span></p>
+<div align="center">
+<table class="1" border="1" cellspacing="0" cellpadding="0" style="border-collapse:
+    collapse;border:none;mso-border-top-alt:solid windowtext 2.25pt;mso-border-bottom-alt:
+    solid windowtext 2.25pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt">
+    <tbody>
+        <tr>
+            <td width="102" style="width:76.3pt;border-top:solid windowtext 2.25pt;
+            border-left:none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext 2.25pt;mso-border-bottom-alt:solid windowtext 1.5pt;
+            mso-border-right-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span style="font-family:宋体;
+            mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">测试点编号</span><span lang="EN-US"><o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border-top:solid windowtext 2.25pt;
+            border-left:none;border-bottom:solid windowtext 1.5pt;border-right:none;
+            mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n<o:p></o:p></span></i></p>
+            </td>
+            <td width="106" style="width:79.8pt;border-top:2.25pt;border-left:1.0pt;
+            border-bottom:1.5pt;border-right:1.0pt;border-color:windowtext;border-style:
+            solid;mso-border-top-alt:2.25pt;mso-border-left-alt:.5pt;mso-border-bottom-alt:
+            1.5pt;mso-border-right-alt:.5pt;mso-border-color-alt:windowtext;mso-border-style-alt:
+            solid;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span style="font-family:宋体;
+            mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">测试点编号</span><span lang="EN-US"><o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border-top:solid windowtext 2.25pt;
+            border-left:none;border-bottom:solid windowtext 1.5pt;border-right:none;
+            mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n<o:p></o:p></span></i></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="102" style="width:76.3pt;border-top:none;border-left:none;
+            border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext 1.5pt;mso-border-top-alt:solid windowtext 1.5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">1<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext 1.5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext 1.5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 2<o:p></o:p></span></p>
+            </td>
+            <td width="106" style="width:79.8pt;border:solid windowtext 1.0pt;border-top:
+            none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">6<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 20<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="102" style="width:76.3pt;border-top:none;border-left:none;
+            border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">2<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 5<o:p></o:p></span></p>
+            </td>
+            <td width="106" style="width:79.8pt;border:solid windowtext 1.0pt;border-top:
+            none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">7<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 40<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="102" style="width:76.3pt;border-top:none;border-left:none;
+            border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">3<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 7<o:p></o:p></span></p>
+            </td>
+            <td width="106" style="width:79.8pt;border:solid windowtext 1.0pt;border-top:
+            none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">8<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 60<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="102" style="width:76.3pt;border-top:none;border-left:none;
+            border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">4<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 8<o:p></o:p></span></p>
+            </td>
+            <td width="106" style="width:79.8pt;border:solid windowtext 1.0pt;border-top:
+            none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">9<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 80<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="102" style="width:76.3pt;border-top:none;border-left:none;
+            border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext 2.25pt;mso-border-right-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">5<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 2.25pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 10<o:p></o:p></span></p>
+            </td>
+            <td width="106" style="width:79.8pt;border-top:none;border-left:solid windowtext 1.0pt;
+            border-bottom:solid windowtext 2.25pt;border-right:solid windowtext 1.0pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+            mso-border-bottom-alt:solid windowtext 2.25pt;padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><span lang="EN-US">10<o:p></o:p></span></p>
+            </td>
+            <td width="76" style="width:2.0cm;border:none;border-bottom:solid windowtext 2.25pt;
+            mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+            padding:0cm 5.4pt 0cm 5.4pt">
+            <p class="NOI0" align="center" style="margin-top:6.0pt;text-align:center;
+            text-indent:0cm;mso-char-indent-count:0"><i><span lang="EN-US">n</span></i><span lang="EN-US"> = 100<o:p></o:p></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p class="NOI1"><font face="宋体">对于100%的数据，保证1&le;n&le;100，1&le;m&le;n^2。0&le;P_(i,j)&le;1，P_(i,j) &nbsp;恰好包含2位小数，且 P_(i,j)+P_(j,i)=1。表示猴子牌组合的01串长度均为 n，且不含其它字符。</font></p>
+<p class="NOI1"><font face="宋体">P_(i,j )的生成方式为：在某个环境下，使用某个随机数种子，持续调用某语言生成整数的伪随机函数直到时钟函数达到1秒，接下来取连续的若干个随机函数值对101取模再除以100，作为输入数据中的满足 i&lt;j 的 P_(i,j)。该生成过程只启动一次，即不会出现看到数据以后重新生成数据的情况。以上操作的目的是希望P_(i,j)的每个取值几乎等概率且不受人控制，你可以不必理会这段话。</font></p>
+<p class="NOI1">&nbsp;</p>
+<p class="NOI1"><span lang="EN-US"><o:p></o:p></span></p>
+</div>
+<br />
+<div id="pcode" class="code">
+<div id="pcodesu" style="display:none;">
+<hr />
+<span class='notice'>这是一道完善程序的试题，你只需要在下面程序标注的"<span class='code'><span class="Y">@你的代码</span></span>"的位置补充适当的语句或语句段使程序能正确运行即可，在提交的时候，你要提交的内容只包括补充的内容，不包括其他的代码。</span>
+</div>
+</div>
+
+<div class="ralign"><a href="http://www.tsinsen.com/A1479.htm###" onclick="showSubmit()">提交</a> &nbsp; <a href="http://www.tsinsen.com/A1479.htm###" onclick="discussProblem()">试题讨论</a></div>
+<script type="text/javascript">
+
+var viewType = "f";
+_codeLines = document.createElement("OL");
+e("pcode").appendChild(_codeLines);
+function getGPID() {
+	return "A1479";
+}
+var gpid = getGPID();
+function getProbTitle() {
+	return "猴子大战";
+}
+function getProbType() {
+	return "DEFAULT";
+}
+function getProbContent() { return e("pcont1").innerHTML; }
+function getSrc() {
+	return "CTSC 2013 第二试";
+}
+function getCode() {
+	return "";
+}
+function getLangs() {
+	return "CPP,C0X,VC9,C,JAVA,PAS,CS";
+}
+function getInDataCount() {
+	return "0";
+}
+function getInputFileName() {
+	return "";
+}
+function getOutputFileName() {
+	return "";
+}
+function getSubinter() {
+	var inter = "0";
+	var iint = parseInt(""+inter);
+	if (!(iint>0))
+		return 0;
+	return iint;
+}
+function getRemain() {
+	var remain = "0";
+	var iremain = parseInt(""+remain);
+	if (!(iremain>0))
+		return 0;
+	return iremain;
+}
+
+function initProb()
+{
+	if (getSrc() && getSrc()!="")
+		e("psrc").style.display = "block";
+	var cod = getCode();
+	if (cod && cod.indexOf("@你的代码")>=0)
+	{
+		e("pcodesu").style.display = "block";
+		port_fc(cod, addline);
+	}
+	if (getSubinter()>0)
+	{
+		var rem = getRemain();
+		var intervalVar;
+		var startT = new Date().getTime();
+		function setSubInt()
+		{
+			var passT = Math.floor((new Date().getTime() - startT) / 1000);
+			var crem = rem - passT;
+			var minu = Math.floor(crem/60); var sec = crem - minu*60;
+			var subTxt = "";
+			if (crem<=0)
+				subTxt = "<span class=gcolor>现在可以提交</span>";
+			else
+				subTxt = "<span class=rcolor>还剩" + (minu>0?minu+"分":"") + sec + "秒</span>";
+			var html = "代码提交间隔：<span class='uline'>" + getSubinter() + "分钟(" + subTxt + ")</span> &nbsp; ";
+			e("subinterdiv").innerHTML = html;
+			if (crem <= 0)
+			{
+				clearInterval(intervalVar);
+			}
+		}
+		intervalVar = setInterval(setSubInt, 1000);
+		setSubInt();
+	}
+	if (getProbType()=="SUBMIT")
+	{
+		e("probtypediv").innerHTML = "<span class='uline'>提交答案型</span> &nbsp; ";
+		e("pinputs").style.display = "block";
+		var inCnt = parseInt(getInDataCount());
+		var _dlist = newT("UL", e("inputlist"));
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "下载全部");
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1479",dataid:"all"},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+		newT("br", _dlist);
+		for (var i = 0; i < inCnt; ++i)
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "input" + (i+1) + ".txt");
+			ca.dataId = i+1;
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1479",dataid:this.dataId},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+	}
+	var inpName = getInputFileName(), outName = getOutputFileName();
+	var inOutStr = "";
+	if (inpName && inpName!="")
+	{
+		inOutStr = "输入文件名：<b>" + inpName + "</b>";
+	}
+	if (outName && outName!="")
+	{
+		if (inOutStr != "")
+			inOutStr += " &nbsp; ";
+		inOutStr += "输出文件名：<b>" + outName + "</b>";
+	}
+	e("inputoutput").innerHTML = inOutStr;
+}
+
+initProb();
+
+function weiboShareClick() {
+	var _w = 16 , _h = 16;
+	var param = {
+		url:location.href,
+		type:'3',
+		count:'', /**是否显示分享数，1显示(可选)*/
+		appkey:'1707773381', /**您申请的应用appkey,显示分享来源(可选)*/
+		title:"试题 "+getProbTitle(), /**分享的文字内容(可选，默认为所在页面的title)*/
+		pic:'http://www.tsinsen.com/images/tsinsen100.png', /**分享图片的路径(可选)*/
+		ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+		language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+		rnd:new Date().valueOf()
+	}
+	rrShareOnclick(param, "http://service.weibo.com/share/share.php");
+}
+
+function qqShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		url:location.href,
+		showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+		desc:'',/*默认分享理由(可选)*/
+		summary:cont,/*分享摘要(可选)*/
+		title:getProbTitle(),/*分享标题(可选)*/
+		site:'清橙网络自动评测系统',/*分享来源 如：腾讯网(可选)*/
+		pics:'http://www.tsinsen.com/images/tsinsen100.png', /*分享图片的路径(可选)*/
+		style:'203',
+		width:22,
+		height:22
+	};
+	rrShareOnclick(param, "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey");
+}
+
+function renrenShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		resourceUrl : '',	//分享的资源Url
+		pic : 'http://www.tsinsen.com/images/tsinsen100.png',		//分享的主题图片Url
+		title :getProbTitle(),		//分享的标题
+		description : cont	//分享的详细描述
+	};
+	rrShareOnclick(param);
+}
+
+var lineNum = 0;
+function addline(st) { newT("LI", _codeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", '<span class="Y">@你的代码</span>')); }
+
+function OnUploadCompleted(ret, fn, msg)
+{
+	if (ret+""=="1")
+	{
+		setData("lastsubtype", "FILE");
+		portxd("/test.SubmitCode.dt", {gpid:gpid,codefn:msg}, function(obj){
+			if (""+obj["ret"]=="1")
+			{
+				window.location.href = "/AllSubmits.page?type=a";
+			}
+			else
+			{
+				alert(obj["msg"]);
+				showSubmit();
+			}
+		});
+	}
+	else
+	{
+		alert(msg);
+		showSubmit();
+	}
+}
+
+function showSubmit()
+{
+	var cc = getCode();
+	var canUseFile = (cc==null)||(cc=="");
+	var isSubmit = (getProbType()=="SUBMIT");
+	var canUsePaste = !isSubmit;
+	var _langs;
+	var _pop = createPopWin("提交代码", function(gdiv){
+		var divS = newT("", gdiv, "vsp");
+		
+		var fdiv = newT("", gdiv);
+		newT("", fdiv, "", '<iframe id="dataupf" src="http://www.tsinsen.com/CommonFileUpload.page" style="width:220px; height:40px; margin:0px; padding:0px; border:0px; "></iframe>');
+		
+		var div = newT("", gdiv);
+		
+		fdiv.style.display = "none";
+		div.style.display = "block";
+		
+		function setDivS1()
+		{
+			if (!canUsePaste && canUseFile)
+			{
+				setDivS2()
+				return ;
+			}
+			fdiv.style.display = "none";
+			div.style.display = "block";
+			divS.innerHTML = "";
+			var l1 = newT("span", divS, "", "<b>* 粘贴代码提交</b>");
+			if (canUseFile)
+			{
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+				
+				var l2 = newT("a", divS, "", "上传文件提交");
+				l2.href = "###";
+				l2.onclick = function() {
+					setDivS2();
+				};
+			}
+		}
+		function toLangDesc(lang)
+		{
+			if (lang=="CPP") return "C++ (MinGW g++ 4.7.2)";
+			if (lang=="C") return "C (MinGW gcc 4.7.2)";
+			if (lang=="C0X") return "C++0x (MinGW g++ 4.7.2 --std=c++0x)";
+			if (lang=="VC9") return "VC (Microsoft Visual C++ 2008)";
+			if (lang=="PAS") return "PAS (Free Pascal Compiler 2.4.0)";
+			if (lang=="CS") return "C# (Microsoft .NET 3.5)";
+			if (lang=="JAVA") return "Java (Java 1.7.0_15)";
+			if (lang=="RUBY") return "Ruby (Ruby 1.8.6)";
+			if (lang=="PERL") return "Perl (Perl v5.16.3)";
+			if (lang=="PYTHON") return "Python (Python 3.3.0)";
+			if (lang=="PYTHON27") return "Python (Python 2.7.3)";
+			if (lang=="PHP") return "PHP (PHP 5.4.13)";
+			return lang;
+		}
+		function setDivS2()
+		{
+			if (canUsePaste && !canUseFile)
+			{
+				setDivS1()
+				return ;
+			}
+			div.style.display = "none";
+			fdiv.style.display = "block";
+			divS.innerHTML = "";
+			if (canUsePaste)
+			{
+				var l1 = newT("a", divS, "", "粘贴代码提交");
+				l1.href = "###";
+				l1.onclick = function() {
+					setDivS1();
+				};
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+			}
+			var l2 = newT("span", divS, "", "<b>* 上传文件提交</b>");
+			if (isSubmit)
+			{
+				newT("", divS, "", "这是一道提交答案的试题，请将<b>output*.txt</b>打包在一起后提交。");
+			}
+		}
+		var prevsubtype = getData("lastsubtype");
+		if (prevsubtype == "FILE")
+			setDivS2();
+		else
+			setDivS1();
+		
+		var _lang = newT(null, div, "smallsp", "语言选择：");
+		_langs = newT("select", _lang);
+
+		var langs = getLangs();
+		var langss = langs.split(",");
+		_langs.options.length = 0;
+		for (la in langss)
+			_langs.options.add(new Option(toLangDesc(langss[la]), langss[la]));
+
+		try {
+			var prevlang = getData("lastlang");
+			if (prevlang)
+			{
+				for (var i = 0; i < _langs.options.length; i++)
+					if (_langs.options[i].value == prevlang)
+						_langs.options[i].selected = true;
+			}
+		} catch ( errx ) {};
+
+		var _code = newT(null, div, "code");
+		var _curcode = getCode() || "";
+		var lineNum = 0;
+		if (_curcode && _curcode.indexOf("@你的代码")>=0)
+		{
+			var _scodeLines = newT("OL", _code);
+			port_fc(_curcode, function(st){ newT("LI", _scodeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", "<textarea name='code' id='code' class='code' style='height:200px;width:600px;'></textarea>")); });
+		}
+		else
+			_code.innerHTML = "<textarea name='code' id='code' class='code' style='height:430px;width:660px;'></textarea>";
+		var _btns = newT("", div, "btns");
+		var _okBtn = createButton(_btns, "提交", function() {
+			var vgpid = gpid;
+			var vlang = _langs.value;
+			var vcode = e("code").value;
+			if (vcode=="")
+			{
+				alert("请输入要提交的程序。");
+				_okBtn.enableClick();
+				return true;
+			}
+			else
+			{
+				setData("lastsubtype", "CODE");
+				portxd("/test.SubmitCode.dt", {gpid:vgpid,lang:vlang,code:vcode}, function(obj){
+					setData("lastlang", vlang);
+					if (""+obj["ret"]=="1")
+					{
+						window.location.href = "/AllSubmits.page?type=a";
+					}
+					else
+					{
+						alert(obj["msg"]);
+						_okBtn.enableClick();
+					}
+				});
+			}
+			return false;
+		});
+		var _closeBtn = createButton(_btns, "关闭", function() { _pop.doHide(); });
+	}, "", function(){}, 800);
+}
+function formatChange()
+{
+	if (viewType == "f")
+	{
+		viewType = "p";
+		e("pcont1").style.display = "none";
+		e("pcont2").style.display = "block";
+		e('fcl').innerHTML = "查看格式化的试题";
+	}
+	else
+	{
+		viewType = "f";
+		e("pcont2").style.display = "none";
+		e("pcont1").style.display = "block";
+		e('fcl').innerHTML = "查看未格式化的试题";
+	}
+}
+function discussProblem() { location.href = "/Forum/Index.page?gpid=" + gpid; }
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+  	inlineMath: [ ['$'+'$','$'+'$'], ['\\(','\\)']],
+  	displayMath: [ ['\\[','\\]'] ]
+  }
+});
+</script>
+<script type="text/javascript" src="http://www.tsinsen.com/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

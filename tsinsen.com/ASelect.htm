@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="http://www.tsinsen.com/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+<title>试题选择 - Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"36843","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="www_tsinsen_default.html" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="www_tsinsen_default.html">首页</a>
+ <div class="drop">
+  <div class=t><a href='www_tsinsen_default.html' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='ProblemArchive.htm' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='ASelect.htm'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="AllSubmits.htm">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='AllSubmits.htm' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='AssignManage.htm'>作业管理</a></div>
+  <div class=t><a href='MyAssignment.htm'>我的作业</a></div>
+  <div class=t><a href='Problemlist.htm'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DiskView.htm'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='AUsers.htm'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DomainChange.htm'>课程切换</a></div>
+  <div class=t><a href='http://www.tsinsen.com/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='http://www.tsinsen.com/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='ProblemManage.htm'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ChangePwd.htm'>修改密码</a></div>
+  <div class=t><a href='MyMessages.htm'>我的消息</a></div>
+  <div class=t req="admin"><a href='SendMessage.htm'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ASelect.htm###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='UserManage.htm'>用户管理</a></div>
+  <div class=t><a href='ProblemAdmin.htm'>试题管理</a></div>
+  <div class=t><a href='rejudge.htm'>试题复评</a></div>
+  <div class=t><a href='ChangeUPwd.htm'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='resources.htm'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="help.htm">帮助</a>
+ <div class="drop">
+  <div class=t><a href='help.htm' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='http://www.tsinsen.com/updates.htm' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="http://www.tsinsen.com/FindPassword.htm">忘记密码</a> &nbsp;
+其他登录：<a href="http://www.tsinsen.com/ASelect.htm###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="http://www.tsinsen.com/ASelect.htm###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="http://www.tsinsen.com/ASelect.htm###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<h2>试题选择</h2>
+
+<br />
+
+<div class="calign vspace">
+<div style="position:relative; width:100%; height:100%;">
+输入关键字：<input id="key" />
+<div id="test" style="font-family:'宋体', '新宋体'; ">
+</div>
+</div>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+var ckey = null;
+var cpage = 1;
+var pageId = 1;
+
+function dosearch()
+{
+	var k = e("key");
+	if (k.value!=ckey || pageId!=cpage)
+	{
+		if (k.value != ckey)
+		{
+			pageId = 1;
+		}
+		ckey = k.value;
+		cpage = pageId;
+		var vv = e("test");
+		vv.innerHTML = "正在获取数据 ...";
+		portxd("/problem.SelectProblems.dt", {key:ckey,page:cpage,editable:0}, onLoadRes );
+	}
+}
+
+dosearch();
+
+var intname = setInterval("dosearch();",1500);
+//clearInterval(intname);
+
+function onLoadRes(obj){
+	var vv = e("test");
+	port_sp(vv, obj, function(ni) {
+		pageId = ni;
+		dosearch();
+	}, function(div, row){
+			if (confirm("是否将此题添加到题库？添加后将不可修改或撤消。"))
+			{
+				div.innerHTML = "Sending...";
+				portxd('/problem.AddArchiveProblem.dt', {pid:row["pid"]}, function (obj){
+					if (""+obj["ret"]=="1")
+						div.innerHTML = "OK.";
+					else
+						div.innerHTML = "Faild.";
+				});;
+			}
+		}, 'W');
+};
+
+</script>
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

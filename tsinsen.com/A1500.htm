@@ -1,0 +1,1008 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Pages.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" href="http://www.tsinsen.com/styles/Tsinsen2011.css" rel="stylesheet" />
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen0.js"></script>
+<script language="javascript" type="text/javascript" src="http://www.tsinsen.com/js/tsinsen2013.js"></script>
+
+<!-- InstanceBeginEditable name="header" -->
+
+<title>A1500. Alice与能源计划（罗剑桥） -2013中国国家集训队第二次作业- Tsinsen 清橙网络自动评测系统 - 清橙</title>
+<!-- InstanceEndEditable -->
+<script type="text/javascript">
+var loadTime = new Date().getTime();
+function getUserInfo()
+{
+	var ret = {"admindisplay":"none","cdate":"2018年6月7日 星期四","course":"","courseid":"","coursetype":"","email":"","emailt":"0","login":"","msgs":"0","name":"","notadmindisplay":"block","notuserdisplay":"block","ret":"1","school":"","time":"36929","type":"NULL","userdisplay":"none","userid":""};
+	ret.isSysAdmin = (ret.type=="SYSADMIN");
+	ret.isAdmin = ret.isSysAdmin||(ret.type=="ADMIN");
+	ret.isUser = ret.isAdmin||(ret.type=="USER");
+	ret.times = ret["time"];
+	ret.timec = loadTime;
+	return ret;
+}
+</script>
+</head>
+
+<body>
+<div id="popall"></div>
+<div id="ubody">
+<div id="frameall">
+<div id="top">
+<div id="headimg">
+ <div id='ctime'></div>
+ <div style="position:absolute; left:100px; top:102px;"><a href="www_tsinsen_default.html" style="color:#FFF;">http://www.tsinsen.com/</a></div>
+ <div style="display:none;"><h1>清橙网格自动评测系统</h1></div>
+</div>
+</div>
+
+<div id="mainm" style="display:none;">
+<ul class="mainmenu">
+<li class="mmitem"><a href="www_tsinsen_default.html">首页</a>
+ <div class="drop">
+  <div class=t><a href='www_tsinsen_default.html' title="进入首页，主菜单也可以直接点哦">进入首页</a></div>
+ </div></li>
+<li class="mmitem"><a href="ProblemArchive.html">公共题库</a>
+ <div class="drop">
+  <div class=t><a href='ProblemArchive.htm' title="进入公共题库，主菜单也可以直接点哦">进入公共题库</a></div>
+  <div class=t req="sysadmin"><a href='ASelect.htm'>添加试题到公共题库</a></div>
+ </div></li>
+<li class="mmitem"><a href="AllSubmits.htm">查看提交结果</a>
+ <div class="drop">
+  <div class=t><a href='AllSubmits.htm' title="查看提交结果，主菜单也可以直接点哦">查看提交结果</a></div>
+ </div></li>
+<li class="mmitem" req="user">课程
+ <div class="drop">
+  <div class=t req="admin"><a href='AssignManage.htm'>作业管理</a></div>
+  <div class=t><a href='MyAssignment.htm'>我的作业</a></div>
+  <div class=t><a href='Problemlist.htm'>课内题库</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DiskView.htm'>教学课件</a></div>
+  <div class="sep" req="admin"></div>
+  <div class=t req="admin"><a href='AUsers.htm'>用户管理</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='DomainChange.htm'>课程切换</a></div>
+  <div class=t><a href='http://www.tsinsen.com/course/applycourse.page'>开设新课程(老师专用)</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='http://www.tsinsen.com/Forum/Index.page'>试题讨论</a></div>
+ </div></li>
+</li>
+<li class="mmitem" req="user">我的清橙
+ <div class="drop">
+  <div class=t><a href='ProblemManage.htm'>我来出题</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='ChangePwd.htm'>修改密码</a></div>
+  <div class=t><a href='MyMessages.htm'>我的消息</a></div>
+  <div class=t req="admin"><a href='SendMessage.htm'>发送消息</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='A1500.htm###' onclick="logoutClick()">登出</a></div>
+ </div></li>
+<li class="mmitem" req="sysadmin">管理
+ <div class="drop">
+  <div class=t><a href='UserManage.htm'>用户管理</a></div>
+  <div class=t><a href='ProblemAdmin.htm'>试题管理</a></div>
+  <div class=t><a href='rejudge.htm'>试题复评</a></div>
+  <div class=t><a href='ChangeUPwd.htm'>密码重设</a></div>
+ </div></li>
+<li class="mmitem">常用资源
+ <div class="drop">
+  <div class=t><a href='resources.htm'>竞赛资料下载</a></div>
+ </div></li>
+<li class="mmitem"><a href="help.htm">帮助</a>
+ <div class="drop">
+  <div class=t><a href='help.htm' title="查看帮助，主菜单也可以直接点哦">查看帮助</a></div>
+  <div class="sep"></div>
+  <div class=t><a href='updates.htm' title="最近更新">最近更新</a></div>
+ </div></li>
+</ul>
+<div id="topOp"></div>
+</div>
+<div id="cuinfo" class="cuinfo">
+&gt;&gt; 用户名或邮箱：<input type="text" id="username" name="username" class="text"> &nbsp; 密码：<input type="password" id="password" name="password" onkeydown="pwdkey(event)" class="text"> &nbsp; <input type="submit" name="Submit" value=" 登 录 " class="button" style="cursor:pointer" onclick="loginClick()" /> &nbsp; <input type="button" name="Reg" value=" 注 册 " class="button" style="cursor:pointer" onclick="regClick()" /> &nbsp; <a href="FindPassword.htm">忘记密码</a> &nbsp;
+其他登录：<a href="A1500.htm###" title="QQ登录" onclick="qqlogin()"><div class="qqpic">&nbsp;</div></a>
+<a href="A1500.htm###" title="人人登录" onclick="renrenlogin()"><div class="renrenpic">&nbsp;</div></a>
+<a href="A1500.htm###" title="微博登录" onclick="weibologin()"><div class="weibopic">&nbsp;</div></a>
+</div>
+
+<div id="menuall" style="display:none;"></div>
+<script type="text/javascript">
+onPageStart();
+</script>
+<div id="main"><div class="content">
+<!--begin main-->
+<!-- InstanceBeginEditable name="content" -->
+<div class="probtitle" id="ptit">A1500. Alice与能源计划（罗剑桥）</div>
+<div style="text-align:center; font-size:14px; vertical-align:middle;" id="pres">
+<div style="font-weight:bold; margin:8px 0px 6px 0px; ">时间限制：<span class="uline">2.0s</span> &nbsp; 内存限制：<span class="uline">512.0MB</span> &nbsp; <span id="subinterdiv"></span><span id="probtypediv"></span><span class="uline"></span></div>
+<div>总提交次数：<b><a href="http://www.tsinsen.com/AllSubmits.page?type=a&amp;gpid=A1500,D6085,D7670,D8204,P3090"></a></b> &nbsp; AC次数：<b></b> &nbsp; 平均分：<b></b></div>
+<div id="inputoutput"></div>
+</div>
+<div class="ralign" style="margin:20px 0 20px 0;"><div class="inl vmid">将本题分享到：</div><div class="inl vmid"><a class="share_renren" title="分享到人人网" onclick="renrenShareClick()"></a> &nbsp; <a class="share_qq" title="分享到QQ空间" onclick="qqShareClick()"></a> &nbsp; <a class="share_weibo" title="分享到新浪微博" onclick="weiboShareClick()"></a></div> &nbsp; <div class="inl vmid"><a href="A1500.htm###" onclick="formatChange()" id="fcl">查看未格式化的试题</a> &nbsp; <a href="http://www.tsinsen.com/A1500.htm###" onclick="showSubmit()">提交</a> &nbsp; <a href="http://www.tsinsen.com/A1500.htm###" onclick="discussProblem()">试题讨论</a></div></div>
+<div id="psrc" style="margin-top:20px; display:none;">
+<div class="pdsec">试题来源</div><div class="pdcont">　　2013中国国家集训队第二次作业</div>
+</div>
+<div id="pinputs" style="display:none; ">
+<div class="pdsec">输入数据</div>
+<div class="pdcont"><span class="notice">　　这是一道提交答案的试题，下面给出了该题的输入数据：</span></div>
+<div id="inputlist" class="pddata">
+</div>
+</div>
+<div id="pcont1" style="margin-top:20px; display:block;">
+<div class='pdsec'>问题描述</div><div class='pdcont'>　　在梦境中，Alice来到了火星。不知为何，转眼间Alice被任命为火星能源部长，并立刻面临着一个严峻的考验。<br />
+　　......<br />
+　　为了方便，我们可以将火星抽象成平面，并建立平面直角坐标系。<br />
+　　火星上一共有<i>N</i>个居民点。每个居民点认为是平面上的一个点。第<i>i</i>个居民点的坐标为(<i>X<sub>i</sub>, Y<sub>i</sub></i>），对能源的需求量为<i>Power<sub>i</sub></i>。每个居民点消耗的能源由它附近的发电站提供。由于技术原因，<b>一个居民点消耗的所有能源必须来自同一座发电站</b>。<br />
+　　自人类移民火星之初，政府就有一个规模宏大的发电站建设计划。<br />
+　　按照这个计划，政府将在火星上建立<i>M</i>座发电站，这<i>M</i>座发电站将是火星居民的全部能量来源。其中，第<i>i</i>座发电站的坐标为(<i>x<sub>i</sub>, y<sub>i</sub></i>)，产生能量的上限值为<i>Limit<sub>i</sub></i>，建设费用为<i>Price<sub>i</sub></i>。同样由于技术原因，第<i>i</i>座发电站只能为<b>与它的距离不超过</b><b><i>R<sub>i</sub></i></b><b>的居民点</b>提供能源。<br />
+　　然而，由于政府的财政状况一直十分紧张，截至目前，这<i>M</i>座发电站中只有少量建成并投入使用，多数的发电站尚未开始建设。<br />
+　　......<br />
+　　Alice的任务是修改这个计划，使得它更符合实际情况。根据新的规定，<b>一座发电站产生的所有能源必须提供给同一个居民点</b>。Alice知道这个规定意味着<i>N</i>个居民点消耗的能源将分别由<i>N</i>座不同的发电站提供，而且为第i个居民点提供能源的那座发电站的<i>Limit</i>值一定不小于<i>Power<sub>i</sub></i>。<br />
+　　......<br />
+　　Alice需要在原计划的<i>M</i>座发电站中<b>选择恰好</b><b><i>N</i></b><b>座发电站</b>，并完全放弃剩余的<i>M - N</i>座发电站，使得这<i>N</i>座发电站能够满足<i>N</i>个居民点的需要。<br />
+　　对于一个可行的方案，设方案中选择的<i>N</i>座发电站构成集合<i>S</i>，而已经建成的发电站构成集合<i>T</i>，那么定义这个方案的代价为<br />
+<br />
+<i></i><br />
+　　<img src="http://www.tsinsen.com/%DE%B1%EA%CC%E21.png" width="326" height="60" />.<br />
+　　即，一个方案的代价等于<b>被选择的且尚未建成</b>的发电站的建设费用之和加上<b>没有被选择的且已经建成</b>的发电站的建设费用之和。<br />
+　　......<br />
+　　在所有可行方案中，你必须帮助Alice找到<b>代价最小</b>的方案，并将选择的<i>N</i>座发电站<b>按编号从小到大的顺序</b>输出。<br />
+　　如果代价最小的方案不唯一，则输出其中<b>字典序最小</b>的方案。<br />
+　　......<br />
+<b>注意，输入文件包含多组测试数据。</b><b></b></div><div class='pdsec'>输入格式</div><div class='pdcont'>　　第一行包含一个正整数<i>T</i>，表示有<i>T</i>组测试数据。接下来依次是<i>T</i>组测试数据。<br />
+　　每组测试数据的第一行包含两个整数<i>N</i><i>、</i><i>M</i>。<br />
+　　接下来<i>N</i>行，每行<i>3</i>个整数：<i>X<sub>i</sub></i><i>、</i><i>Y<sub>i</sub></i><i>、</i><i>Power<sub>i</sub></i>。<br />
+　　再接下来<i>M</i>行，每行<i>6</i>个整数：<i>x<sub>i</sub></i><i>、</i><i> y<sub>i</sub></i><i>、</i><i>Limit<sub>i</sub></i><i>、</i><i>Price<sub>i</sub></i><i>、</i><i>R<sub>i</sub></i><i>、</i><i>Finished<sub>i</sub></i><i>。</i>若<i>Finished<sub>i </sub>= 1</i>，表示第<i>i</i>座发电站已经建成；否则<i>Finished<sub>i</sub> = 0</i><i>，</i>表示第<i>i</i>座发电站尚未开始建设。<i></i></div><div class='pdsec'>输出格式</div><div class='pdcont'>　　对于每组测试数据：<br />
+　　若<b>存在</b>可行方案则输出两行。第一行为一个整数，表示最小代价；第二行是若干个递增的整数，表示<b>字典序最小的最优方案</b>选择的发电站的编号。<br />
+　　若<b>不存在</b>可行方案，则仅输出一行为一个整数<i>-1</i>。</div><div class='pdsec'>样例输入</div><div class='pddata'>4<br />
+1 1<br />
+4 4 1<br />
+8 7 1 2 5 1<br />
+2 3<br />
+0 0 3<br />
+2 0 2<br />
+1 1 5 1 3 0<br />
+1 0 5 1 1 1<br />
+3 0 5 1 3 0<br />
+2 3<br />
+0 0 3<br />
+2 0 2<br />
+1 1 2 0 3 0<br />
+1 0 1 0 1 1<br />
+3 0 3 0 2 0<br />
+2 3<br />
+0 0 3<br />
+2 0 2<br />
+1 1 4 2 2 0<br />
+1 0 2 9 1 1<br />
+3 0 5 4 2 1</div><div class='pdsec'>样例输出</div><div class='pddata'>0<br />
+1<br />
+1<br />
+1 2<br />
+-1<br />
+6<br />
+1 2</div><div class='pdsec'>样例说明</div><div class='pdcont'>　　第<i>1</i>组测试数据：<br />
+　　只有一个居民点，其坐标为(<i>4, 4</i>)，能源需求量<i>Power<sub>1</sub> = 1</i>；仅一座发电站，其坐标为(<i>8, 7</i>)，产生的能量上限<i>Limit<sub>1</sub> = 1</i>，建设费用<i>Price<sub>1</sub> = 2</i>，服务范围半径<i>R<sub>1</sub> = 5</i>，<i>Finished<sub>1</sub> = 1</i>表示已经建成。<br />
+　　两个点之间的距离等于<i>5</i>不超过<i>R<sub>1</sub></i>，并且<i>Power<sub>1</sub></i> <i>≤</i><i> Limit<sub>1</sub></i>。因此唯一的可行方案是花费<i>0</i>的代价保留<i>1</i>号发电站，使它为<i>1</i>号居民点提供能源。<br />
+<br />
+　　第<i>2</i>组测试数据：任意选择两个发电站都是一个可行方案。最小代价是<i>1</i><i>，</i>对应的方案有两种：选择<i>1</i>号和<i>2</i>号发电站；选择<i>2</i>号和<i>3</i>号发电站。而前者的字典序更小。<br />
+　　第<i>3</i>组测试数据：不存在可行方案。<br />
+　　第<i>4</i>组测试数据：代价最小的方案唯一：选择<i>1</i>号和<i>2</i>号发电站，代价为<i>6</i>。</div><div class='pdsec'>数据规模和约定</div><div class='pdcont'>　　对于<i>40%</i>的数据：<i>1 </i><i>≤</i><i> N, M </i><i>≤</i><i> 16</i>。<br />
+　　此外<i>20%</i>的数据：对于任意发电站<i>i</i>有<i>Price<sub>i</sub> = 0</i>。<br />
+　　对于<i>70%</i>的数据：<i>1 </i><i>≤</i><i> N </i><i>≤</i><i> 50</i><i>，</i><i>1 </i><i>≤</i><i> M </i><i>≤</i><i> 100</i>。<br />
+　　对于<i>100%</i>的数据：<i>1 </i><i>≤</i><i> N </i><i>≤</i><i> 400</i><i>，</i><i>1 </i><i>≤</i><i> M </i><i>≤</i><i> 500</i><i>，</i><i>1 </i><i>≤</i><i> T </i><i>≤</i><i> 10</i><i>，</i><i>0 </i><i>≤</i><i> x<sub>i</sub>, y<sub>i </sub>, X<sub>i </sub>, Y<sub>i</sub>, Price<sub>i</sub> </i><i>≤</i><i> 10 000</i><i>，</i><i>1 </i><i>≤</i><i> R<sub>i</sub>, Power<sub>i</sub>, Limit<sub>i</sub> </i><i>≤</i><i> 10 000</i><i>。</i>不同的居民点或发电站的坐标有可能重合。</div><div class='pdsec'>附注</div><div class='pdcont'>　　关于方案的字典序的大小关系的说明：<br />
+<br />
+　　设方案<i>A</i>选择的<i>N</i>座发电站的编号从小到大依次为<i>A<sub>1</sub>, A<sub>2</sub>, </i>…<i>, A<sub>N</sub></i>；设方案<i>B</i>选择的<i>N</i>座发电站的编号从小到大依次为<i>B<sub>1</sub>, B<sub>2</sub>, </i>…<i>, B<sub>N</sub></i>。<br />
+　　我们称方案<i>A</i>比方案<i>B</i>字典序更小，当且仅当存在正整数<i>i</i>，满足<i>1≤i≤N，</i>使得对任意<i>1≤k≤i-1</i>有<i>A<sub>k</sub> = B<sub>k</sub></i>，且<i>A<sub>i</sub> &lt; B<sub>i</sub></i>。</div>
+
+</div>
+<div id="pcont2" style="margin-top:20px; display:none;">
+<p>【问题描述】</p>
+<p class="MsoNormal" align="left"><span style="font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">在梦境中，</span><span lang="EN-US" style="font-size:12.0pt">Alice</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">来到了火星。不知为何，转眼间</span><span lang="EN-US" style="font-size:12.0pt">Alice</span><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">被任命为火星能源部长，并立刻面临着一个严峻的考验。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left"><span lang="EN-US" style="font-size:12.0pt">&nbsp;......</span></p>
+<p class="MsoNormal" align="left"><span lang="EN-US" style="font-size:12.0pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">为了方便，我们可以将火星抽象成平面，并建立平面直角坐标系。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">火星上一共有</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个居民点。每个居民点认为是平面上的一个点。第</span><i><span lang="EN-US" style="font-size:12.0pt">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个居民点的坐标为</span><span lang="EN-US" style="font-size:12.0pt">(<i>X<sub>i</sub>, Y<sub>i</sub></i></span><span style="font-size:12.0pt;font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">），对能源的需求量为</span><i><span lang="EN-US" style="font-size:12.0pt">Power<sub>i</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。每个居民点消耗的能源由它附近的发电站提供。由于技术原因，<b><u>一个居民点消耗的所有能源必须来自同一座发电站</u></b>。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">自人类移民火星之初，政府就有一个规模宏大的发电站建设计划。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">按照这个计划，政府将在火星上建立</span><i><span lang="EN-US" style="font-size:12.0pt">M</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站，这</span><i><span lang="EN-US" style="font-size:12.0pt">M</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站将是火星居民的全部能量来源。其中，第</span><i><span lang="EN-US" style="font-size:12.0pt">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站的坐标为</span><span lang="EN-US" style="font-size:12.0pt">(<i>x<sub>i</sub>, y<sub>i</sub></i>)</span><span style="font-size:12.0pt;font-family:宋体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，产生能量的上限值为</span><i><span lang="EN-US" style="font-size:12.0pt">Limit<sub>i</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，建设费用为</span><i><span lang="EN-US" style="font-size:12.0pt">Price<sub>i</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。同样由于技术原因，第</span><i><span lang="EN-US" style="font-size:12.0pt">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站只能为<b><u>与它的距离不超过</u></b></span><b><i><u><span lang="EN-US" style="font-size:12.0pt">R<sub>i</sub></span></u></i></b><b><u><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的居民点</span></u></b><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">提供能源。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">然而，由于政府的财政状况一直十分紧张，截至目前，这</span><i><span lang="EN-US" style="font-size:12.0pt">M</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站中只有少量建成并投入使用，多数的发电站尚未开始建设。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">&nbsp;......</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">Alice</span><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">的任务是修改这个计划，使得它更符合实际情况。根据新的规定，<b><u>一座发电站产生的所有能源必须提供给同一个居民点</u></b>。</span><span lang="EN-US" style="font-size:12.0pt">Alice</span><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">知道这个规定意味着</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个居民点消耗的能源将分别由</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座不同的发电站提供，而且为第</span><span lang="EN-US" style="font-size:12.0pt">i</span><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">个居民点提供能源的那座发电站的</span><i><span lang="EN-US" style="font-size:12.0pt">Limit</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">值一定不小于</span><i><span lang="EN-US" style="font-size:12.0pt">Power<sub>i</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">&nbsp;......</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">Alice</span><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">需要在原计划的</span><i><span lang="EN-US" style="font-size:12.0pt">M</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">座发电站中<b><u>选择恰好</u></b></span><b><i><u><span lang="EN-US" style="font-size:12.0pt">N</span></u></i></b><b><u><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站</span></u></b><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，并完全放弃剩余的</span><i><span lang="EN-US" style="font-size:12.0pt">M - N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站，使得这</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站能够满足</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">个居民点的需要。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">对于一个可行的方案，设方案中选择的</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站构成集合</span><i><span lang="EN-US" style="font-size:12.0pt">S</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，而已经建成的发电站构成集合</span><i><span lang="EN-US" style="font-size:12.0pt">T</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，那么定义这个方案的代价为</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><!--[if gte msEquation 12]><m:oMathPara><m:oMath><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:"Cambria Math","serif"'><m:r>Cost</m:r><m:r> = </m:r></span></i><m:nary><m:naryPr><m:chr
+m:val="∑" /><m:limLoc m:val="undOvr" /><m:supHide m:val="on" /><span
+style='font-size:12.0pt;mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+font-family:"Cambria Math","serif";mso-ascii-font-family:"Cambria Math";
+mso-hansi-font-family:"Cambria Math";font-style:italic;mso-bidi-font-style:
+normal'><m:ctrlPr></m:ctrlPr></span></m:naryPr><m:sub><i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Cambria Math","serif"'><m:r>i</m:r><m:r>∈</m:r><m:r>S</m:r><m:r>
+</m:r><m:r>And</m:r><m:r> </m:r><m:r>i</m:r></span></i><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:"Cambria Math","serif";mso-bidi-font-family:"Cambria Math";
+color:black;background:white'><m:r>∉</m:r><m:r>T</m:r></span></i></m:sub><m:sup></m:sup><m:e><m:sSub><m:sSubPr><span
+style='font-size:12.0pt;mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Cambria Math","serif";mso-ascii-font-family:"Cambria Math";
+mso-hansi-font-family:"Cambria Math";font-style:italic;mso-bidi-font-style:
+normal'><m:ctrlPr></m:ctrlPr></span></m:sSubPr><m:e><i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Cambria Math","serif"'><m:r>Price</m:r></span></i></m:e><m:sub><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
+12.0pt;font-family:"Cambria Math","serif"'><m:r>i</m:r></span></i></m:sub></m:sSub></m:e></m:nary><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:"Cambria Math","serif"'><m:r> + </m:r></span></i><m:nary><m:naryPr><m:chr
+m:val="∑" /><m:limLoc m:val="undOvr" /><m:supHide m:val="on" /><span
+style='font-size:12.0pt;mso-ansi-font-size:12.0pt;mso-bidi-font-size:12.0pt;
+font-family:"Cambria Math","serif";mso-ascii-font-family:"Cambria Math";
+mso-hansi-font-family:"Cambria Math";font-style:italic;mso-bidi-font-style:
+normal'><m:ctrlPr></m:ctrlPr></span></m:naryPr><m:sub><i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Cambria Math","serif"'><m:r>i</m:r></span></i><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:12.0pt;
+font-family:"Cambria Math","serif";mso-bidi-font-family:"Cambria Math";
+color:black;background:white'><m:r>∉</m:r></span></i><i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Cambria Math","serif"'><m:r>S</m:r><m:r>
+</m:r><m:r>And</m:r><m:r> </m:r><m:r>i</m:r><m:r>∈</m:r><m:r>T</m:r></span></i></m:sub><m:sup></m:sup><m:e><m:sSub><m:sSubPr><span
+style='font-size:12.0pt;mso-ansi-font-size:12.0pt;mso-bidi-font-size:
+12.0pt;font-family:"Cambria Math","serif";mso-ascii-font-family:"Cambria Math";
+mso-hansi-font-family:"Cambria Math";font-style:italic;mso-bidi-font-style:
+normal'><m:ctrlPr></m:ctrlPr></span></m:sSubPr><m:e><i style='mso-bidi-font-style:
+normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Cambria Math","serif"'><m:r>Price</m:r></span></i></m:e><m:sub><i
+style='mso-bidi-font-style:normal'><span lang=EN-US style='font-size:
+12.0pt;font-family:"Cambria Math","serif"'><m:r>i</m:r></span></i></m:sub></m:sSub></m:e></m:nary></m:oMath></m:oMathPara><![endif]--><!--[if !msEquation]--><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:10.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA"><v:shapetype id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">  <v:stroke joinstyle="miter">  <v:formulas>   <v:f eqn="if lineDrawn pixelLineWidth 0">   <v:f eqn="sum @0 1 0">   <v:f eqn="sum 0 0 @1">   <v:f eqn="prod @2 1 2">   <v:f eqn="prod @3 21600 pixelWidth">   <v:f eqn="prod @3 21600 pixelHeight">   <v:f eqn="sum @0 0 1">   <v:f eqn="prod @6 1 2">   <v:f eqn="prod @7 21600 pixelWidth">   <v:f eqn="sum @8 21600 0">   <v:f eqn="prod @7 21600 pixelHeight">   <v:f eqn="sum @10 21600 0">  </v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:f></v:formulas>  <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect">  <o:lock v:ext="edit" aspectratio="t"> </o:lock></v:path></v:stroke></v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style="width:228.75pt;
+height:33pt">  <v:imagedata src="file:///C:\Users\ADMINI~1\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png" o:title="" chromakey="white"> </v:imagedata></v:shape></span><!--[endif]--><i><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></i></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><img src="http://www.tsinsen.com/%DE%B1%EA%CC%E21.png" width="326" height="60" alt="" />.</p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">即，一个方案的代价等于<b><u>被选择的且尚未建成</u></b>的发电站的建设费用之和加上<b><u>没有被选择的且已经建成</u></b>的发电站的建设费用之和。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">&nbsp;......</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">在所有可行方案中，你必须帮助</span><span lang="EN-US" style="font-size:12.0pt">Alice</span><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">找到<b><u>代价最小</u></b>的方案，并将选择的</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站<b><u>按编号从小到大的顺序</u></b>输出。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">如果代价最小的方案不唯一，则输出其中<b><u>字典序最小</u></b>的方案。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">&nbsp;......</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt">&nbsp;&nbsp;&nbsp; </span><b><u><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">注意，输入文件包含多组测试数据。</span></u></b><b><u><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></u></b></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【输入文件】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">第一行包含一个正整数</span><i><span lang="EN-US" style="font-size:12.0pt">T</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，表示有</span><i><span lang="EN-US" style="font-size:12.0pt">T</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">组测试数据。接下来依次是</span><i><span lang="EN-US" style="font-size:12.0pt">T</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">组测试数据。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">每组测试数据的第一行包含两个整数</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">M</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">接下来</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">行，每行</span><i><span lang="EN-US" style="font-size:12.0pt">3</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">个整数：</span><i><span lang="EN-US" style="font-size:12.0pt">X<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">Y<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">Power<sub>i</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">再接下来</span><i><span lang="EN-US" style="font-size:12.0pt">M</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">行，每行</span><i><span lang="EN-US" style="font-size:12.0pt">6</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">个整数：</span><i><span lang="EN-US" style="font-size:12.0pt">x<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span style="font-size:12.0pt"> <span lang="EN-US">y<sub>i</sub></span></span></i><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">Limit<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">Price<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">R<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">、</span></i><i><span lang="EN-US" style="font-size:12.0pt">Finished<sub>i</sub></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">若</span><i><span lang="EN-US" style="font-size:12.0pt">Finished<sub>i </sub>= 1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，表示第</span><i><span lang="EN-US" style="font-size:12.0pt">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站已经建成；否则</span><i><span lang="EN-US" style="font-size:12.0pt">Finished<sub>i</sub> = 0</span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">表示第</span><i><span lang="EN-US" style="font-size:12.0pt">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站尚未开始建设。</span><i><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></i></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【输出文件】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">对于每组测试数据：</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">若<b><u>存在</u></b>可行方案则输出两行。第一行为一个整数，表示最小代价；第二行是若干个递增的整数，表示<b><u>字典序最小的最优方案</u></b>选择的发电站的编号。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">若<b><u>不存在</u></b>可行方案，则仅输出一行为一个整数</span><i><span lang="EN-US" style="font-size:12.0pt">-1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【输入样例】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">4<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">4 4 1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">8 7 1 2 5 1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">2 3<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">0 0 3<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">2 0 2<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 1 5 1 3 0<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 0 5 1 1 1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">3 0 5 1 3 0<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">2 3<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">0 0 3<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">2 0 2<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 1 2 0 3 0<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 0 1 0 1 1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">3 0 3 0 2 0<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">2 3<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">0 0 3<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">2 0 2<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 1 4 2 2 0<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 0 2 9 1 1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">3 0 5 4 2 1<o:p></o:p></span></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【输出样例】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">0<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 2<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">-1<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">6<o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;">1 2<o:p></o:p></span></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【样例解释】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Courier New&quot;;
+mso-hansi-font-family:&quot;Courier New&quot;;mso-bidi-font-family:&quot;Courier New&quot;">第</span><i><span lang="EN-US" style="font-size:12.0pt">1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">组测试数据：</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">只有一个居民点，其坐标为</span><span lang="EN-US" style="font-size:12.0pt">(<i>4, 4</i>)</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，能源需求量</span><i><span lang="EN-US" style="font-size:12.0pt">Power<sub>1</sub> = 1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">；仅一座发电站，其坐标为</span><span lang="EN-US" style="font-size:12.0pt">(<i>8, 7</i>)</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，产生的能量上限</span><i><span lang="EN-US" style="font-size:12.0pt">Limit<sub>1</sub> = 1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，建设费用</span><i><span lang="EN-US" style="font-size:12.0pt">Price<sub>1</sub> = 2</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，服务范围半径</span><i><span lang="EN-US" style="font-size:12.0pt">R<sub>1</sub> = 5</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，</span><i><span lang="EN-US" style="font-size:12.0pt">Finished<sub>1</sub> = 1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">表示已经建成。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">两个点之间的距离等于</span><i><span lang="EN-US" style="font-size:12.0pt">5</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">不超过</span><i><span lang="EN-US" style="font-size:12.0pt">R<sub>1</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">，并且</span><i><span lang="EN-US" style="font-size:12.0pt">Power<sub>1</sub></span></i><span lang="EN-US" style="font-size:12.0pt"> </span><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> Limit<sub>1</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。因此唯一的可行方案是花费</span><i><span lang="EN-US" style="font-size:12.0pt">0</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的代价保留</span><i><span lang="EN-US" style="font-size:12.0pt">1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号发电站，使它为</span><i><span lang="EN-US" style="font-size:12.0pt">1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号居民点提供能源。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt">&nbsp;</span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第</span><i><span lang="EN-US" style="font-size:12.0pt">2</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">组测试数据：任意选择两个发电站都是一个可行方案。最小代价是</span><i><span lang="EN-US" style="font-size:12.0pt">1</span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">对应的方案有两种：选择</span><i><span lang="EN-US" style="font-size:12.0pt">1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号和</span><i><span lang="EN-US" style="font-size:12.0pt">2</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号发电站；选择</span><i><span lang="EN-US" style="font-size:12.0pt">2</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号和</span><i><span lang="EN-US" style="font-size:12.0pt">3</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号发电站。而前者的字典序更小。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第</span><i><span lang="EN-US" style="font-size:12.0pt">3</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">组测试数据：不存在可行方案。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">第</span><i><span lang="EN-US" style="font-size:12.0pt">4</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">组测试数据：代价最小的方案唯一：选择</span><i><span lang="EN-US" style="font-size:12.0pt">1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号和</span><i><span lang="EN-US" style="font-size:12.0pt">2</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">号发电站，代价为</span><i><span lang="EN-US" style="font-size:12.0pt">6</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Courier New&quot;"><o:p></o:p></span></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【</span><span style="font-size:12.0pt;mso-bidi-font-size:16.0pt;font-family:黑体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;font-weight:normal;mso-bidi-font-weight:
+bold">数据规模和约定</span><span style="font-size:12.0pt;font-family:黑体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+0pt;font-weight:normal;mso-bidi-font-weight:bold">】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-font-kerning:
+0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal" style="text-indent:20.5pt;mso-char-indent-count:1.71;
+layout-grid-mode:char"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对于</span><i><span lang="EN-US" style="font-size:12.0pt">40%</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的数据：</span><i><span lang="EN-US" style="font-size:12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> N, M </span></i><i><span style="font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span></i><i><span style="font-size:12.0pt"> <span lang="EN-US">16</span></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:20.5pt;mso-char-indent-count:1.71;
+layout-grid-mode:char"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">此外</span><i><span lang="EN-US" style="font-size:12.0pt">20%</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的数据：对于任意发电站</span><i><span lang="EN-US" style="font-size:12.0pt">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">有</span><i><span lang="EN-US" style="font-size:12.0pt">Price<sub>i</sub> = 0</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:20.5pt;mso-char-indent-count:1.71;
+layout-grid-mode:char"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对于</span><i><span lang="EN-US" style="font-size:12.0pt">70%</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的数据：</span><i><span lang="EN-US" style="font-size:12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> N </span></i><i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span></i><i><span style="font-size:12.0pt"> <span lang="EN-US">50</span></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span></i><i><span lang="EN-US" style="font-size:12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> M </span></i><i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> 100</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:20.5pt;mso-char-indent-count:1.71;
+layout-grid-mode:char"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">对于</span><i><span lang="EN-US" style="font-size:12.0pt">100%</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">的数据：</span><i><span lang="EN-US" style="font-size:12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> N </span></i><i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span></i><i><span style="font-size:12.0pt"> <span lang="EN-US">400</span></span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span></i><i><span lang="EN-US" style="font-size:12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> M </span></i><i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> 500</span></i><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span></i><i><span lang="EN-US" style="font-size:12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> T </span></i><i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> 10</span></i><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">，</span></i><i style="text-indent: 21pt;"><span lang="EN-US" style="font-size:
+12.0pt">0 </span></i><i style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt"> x<sub>i</sub>, y<sub>i </sub>, X<sub>i </sub>, Y<sub>i</sub>, Price<sub>i</sub> </span></i><i style="text-indent: 21pt;"><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i style="text-indent: 21pt;"><span lang="EN-US" style="font-size:12.0pt"> 10 000</span></i><i style="text-indent: 21pt;"><span style="font-size:
+12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">，</span></i><i><span lang="EN-US" style="font-size:
+12.0pt">1 </span></i><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> R<sub>i</sub>, Power<sub>i</sub>, Limit<sub>i</sub> </span></i><i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">&le;</span></i><i><span lang="EN-US" style="font-size:12.0pt"> 10 000</span></i><i><span style="font-size:12.0pt;font-family:
+宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;">。</span></i><span style="font-family: 宋体; font-size: 12pt; text-indent: 21pt;">不同的居民点或发电站的坐标有可能重合。</span></p>
+<h2><span style="font-size:12.0pt;font-family:黑体;
+mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:0pt;font-weight:normal;mso-bidi-font-weight:bold">【</span><span style="font-size:12.0pt;mso-bidi-font-size:16.0pt;font-family:黑体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:Arial;font-weight:normal;mso-bidi-font-weight:
+bold">附注</span><span style="font-size:12.0pt;font-family:黑体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+0pt;font-weight:normal;mso-bidi-font-weight:bold">】</span><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-font-kerning:
+0pt;font-weight:normal;mso-bidi-font-weight:bold"><o:p></o:p></span></h2>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">关于方案的字典序的大小关系的说明：</span><span lang="EN-US" style="font-size:
+12.0pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span lang="EN-US" style="font-size:12.0pt">&nbsp;</span></p>
+<p class="MsoNormal" style="text-indent:21.0pt"><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">设方案</span><i><span lang="EN-US" style="font-size:12.0pt">A</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">选择的</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;">座发电站的编号从小到大依次为</span><i><span lang="EN-US" style="font-size:12.0pt">A<sub>1</sub>, A<sub>2</sub>, </span></i><span lang="EN-US" style="font-size:12.0pt">&hellip;<i>, A<sub>N</sub></i></span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">；设方案</span><i><span lang="EN-US" style="font-size:12.0pt">B</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">选择的</span><i><span lang="EN-US" style="font-size:12.0pt">N</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">座发电站的编号从小到大依次为</span><i><span lang="EN-US" style="font-size:12.0pt">B<sub>1</sub>, B<sub>2</sub>, </span></i><span lang="EN-US" style="font-size:12.0pt">&hellip;<i>, B<sub>N</sub></i></span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;">。</span><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></p>
+<p><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">我们称方案</span><i><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">A</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">比方案</span><i><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">B</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">字典序更小，当且仅当存在正整数</span><i><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">i</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">，满足</span><i><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">1</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:宋体;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">i</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:宋体;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">N</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">，</span></i><span style="font-size:12.0pt;
+font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;
+mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">使得对任意</span><i><span lang="EN-US" style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:宋体;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">1</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:宋体;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">k</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">&le;</span><span lang="EN-US" style="font-size:12.0pt;
+font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;mso-fareast-font-family:宋体;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">i-1</span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:
+&quot;Times New Roman&quot;;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:
+ZH-CN;mso-bidi-language:AR-SA">有</span><i><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">A<sub>k</sub> = B<sub>k</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">，且</span><i><span lang="EN-US" style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-fareast-font-family:宋体;mso-font-kerning:1.0pt;mso-ansi-language:EN-US;
+mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">A<sub>i</sub> &lt; B<sub>i</sub></span></i><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+mso-font-kerning:1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;
+mso-bidi-language:AR-SA">。</span></p>
+</div>
+<br />
+<div id="pcode" class="code">
+<div id="pcodesu" style="display:none;">
+<hr />
+<span class='notice'>这是一道完善程序的试题，你只需要在下面程序标注的"<span class='code'><span class="Y">@你的代码</span></span>"的位置补充适当的语句或语句段使程序能正确运行即可，在提交的时候，你要提交的内容只包括补充的内容，不包括其他的代码。</span>
+</div>
+</div>
+
+<div class="ralign"><a href="http://www.tsinsen.com/A1500.htm###" onclick="showSubmit()">提交</a> &nbsp; <a href="http://www.tsinsen.com/A1500.htm###" onclick="discussProblem()">试题讨论</a></div>
+<script type="text/javascript">
+
+var viewType = "f";
+_codeLines = document.createElement("OL");
+e("pcode").appendChild(_codeLines);
+function getGPID() {
+	return "A1500";
+}
+var gpid = getGPID();
+function getProbTitle() {
+	return "Alice与能源计划（罗剑桥）";
+}
+function getProbType() {
+	return "DEFAULT";
+}
+function getProbContent() { return e("pcont1").innerHTML; }
+function getSrc() {
+	return "2013中国国家集训队第二次作业";
+}
+function getCode() {
+	return "";
+}
+function getLangs() {
+	return "CPP,C0X,VC9,C,JAVA,PAS,CS";
+}
+function getInDataCount() {
+	return "0";
+}
+function getInputFileName() {
+	return "";
+}
+function getOutputFileName() {
+	return "";
+}
+function getSubinter() {
+	var inter = "0";
+	var iint = parseInt(""+inter);
+	if (!(iint>0))
+		return 0;
+	return iint;
+}
+function getRemain() {
+	var remain = "0";
+	var iremain = parseInt(""+remain);
+	if (!(iremain>0))
+		return 0;
+	return iremain;
+}
+
+function initProb()
+{
+	if (getSrc() && getSrc()!="")
+		e("psrc").style.display = "block";
+	var cod = getCode();
+	if (cod && cod.indexOf("@你的代码")>=0)
+	{
+		e("pcodesu").style.display = "block";
+		port_fc(cod, addline);
+	}
+	if (getSubinter()>0)
+	{
+		var rem = getRemain();
+		var intervalVar;
+		var startT = new Date().getTime();
+		function setSubInt()
+		{
+			var passT = Math.floor((new Date().getTime() - startT) / 1000);
+			var crem = rem - passT;
+			var minu = Math.floor(crem/60); var sec = crem - minu*60;
+			var subTxt = "";
+			if (crem<=0)
+				subTxt = "<span class=gcolor>现在可以提交</span>";
+			else
+				subTxt = "<span class=rcolor>还剩" + (minu>0?minu+"分":"") + sec + "秒</span>";
+			var html = "代码提交间隔：<span class='uline'>" + getSubinter() + "分钟(" + subTxt + ")</span> &nbsp; ";
+			e("subinterdiv").innerHTML = html;
+			if (crem <= 0)
+			{
+				clearInterval(intervalVar);
+			}
+		}
+		intervalVar = setInterval(setSubInt, 1000);
+		setSubInt();
+	}
+	if (getProbType()=="SUBMIT")
+	{
+		e("probtypediv").innerHTML = "<span class='uline'>提交答案型</span> &nbsp; ";
+		e("pinputs").style.display = "block";
+		var inCnt = parseInt(getInDataCount());
+		var _dlist = newT("UL", e("inputlist"));
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "下载全部");
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1500",dataid:"all"},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+		newT("br", _dlist);
+		for (var i = 0; i < inCnt; ++i)
+		{
+			var ca = newT("A", newT("LI", _dlist), "", "input" + (i+1) + ".txt");
+			ca.dataId = i+1;
+			ca.href = "###";
+			ca.onclick = function() {
+				portxd("/problem.Problem.dt", {cmd:"indata",gpid:"A1500",dataid:this.dataId},function(obj) {
+					if (obj["ret"]+""=="1")
+					{
+						downloadByHandle(obj["handle"]);
+					}
+				});
+			}
+		}
+	}
+	var inpName = getInputFileName(), outName = getOutputFileName();
+	var inOutStr = "";
+	if (inpName && inpName!="")
+	{
+		inOutStr = "输入文件名：<b>" + inpName + "</b>";
+	}
+	if (outName && outName!="")
+	{
+		if (inOutStr != "")
+			inOutStr += " &nbsp; ";
+		inOutStr += "输出文件名：<b>" + outName + "</b>";
+	}
+	e("inputoutput").innerHTML = inOutStr;
+}
+
+initProb();
+
+function weiboShareClick() {
+	var _w = 16 , _h = 16;
+	var param = {
+		url:location.href,
+		type:'3',
+		count:'', /**是否显示分享数，1显示(可选)*/
+		appkey:'1707773381', /**您申请的应用appkey,显示分享来源(可选)*/
+		title:"试题 "+getProbTitle(), /**分享的文字内容(可选，默认为所在页面的title)*/
+		pic:'http://www.tsinsen.com/images/tsinsen100.png', /**分享图片的路径(可选)*/
+		ralateUid:'', /**关联用户的UID，分享微博会@该用户(可选)*/
+		language:'zh_cn', /**设置语言，zh_cn|zh_tw(可选)*/
+		rnd:new Date().valueOf()
+	}
+	rrShareOnclick(param, "http://service.weibo.com/share/share.php");
+}
+
+function qqShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		url:location.href,
+		showcount:'0',/*是否显示分享总数,显示：'1'，不显示：'0' */
+		desc:'',/*默认分享理由(可选)*/
+		summary:cont,/*分享摘要(可选)*/
+		title:getProbTitle(),/*分享标题(可选)*/
+		site:'清橙网络自动评测系统',/*分享来源 如：腾讯网(可选)*/
+		pics:'http://www.tsinsen.com/images/tsinsen100.png', /*分享图片的路径(可选)*/
+		style:'203',
+		width:22,
+		height:22
+	};
+	rrShareOnclick(param, "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey");
+}
+
+function renrenShareClick() {
+	var cont = removeHTML(getProbContent());
+	var param = {
+		resourceUrl : '',	//分享的资源Url
+		pic : 'http://www.tsinsen.com/images/tsinsen100.png',		//分享的主题图片Url
+		title :getProbTitle(),		//分享的标题
+		description : cont	//分享的详细描述
+	};
+	rrShareOnclick(param);
+}
+
+var lineNum = 0;
+function addline(st) { newT("LI", _codeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", '<span class="Y">@你的代码</span>')); }
+
+function OnUploadCompleted(ret, fn, msg)
+{
+	if (ret+""=="1")
+	{
+		setData("lastsubtype", "FILE");
+		portxd("/test.SubmitCode.dt", {gpid:gpid,codefn:msg}, function(obj){
+			if (""+obj["ret"]=="1")
+			{
+				window.location.href = "/AllSubmits.page?type=a";
+			}
+			else
+			{
+				alert(obj["msg"]);
+				showSubmit();
+			}
+		});
+	}
+	else
+	{
+		alert(msg);
+		showSubmit();
+	}
+}
+
+function showSubmit()
+{
+	var cc = getCode();
+	var canUseFile = (cc==null)||(cc=="");
+	var isSubmit = (getProbType()=="SUBMIT");
+	var canUsePaste = !isSubmit;
+	var _langs;
+	var _pop = createPopWin("提交代码", function(gdiv){
+		var divS = newT("", gdiv, "vsp");
+		
+		var fdiv = newT("", gdiv);
+		newT("", fdiv, "", '<iframe id="dataupf" src="http://www.tsinsen.com/CommonFileUpload.page" style="width:220px; height:40px; margin:0px; padding:0px; border:0px; "></iframe>');
+		
+		var div = newT("", gdiv);
+		
+		fdiv.style.display = "none";
+		div.style.display = "block";
+		
+		function setDivS1()
+		{
+			if (!canUsePaste && canUseFile)
+			{
+				setDivS2()
+				return ;
+			}
+			fdiv.style.display = "none";
+			div.style.display = "block";
+			divS.innerHTML = "";
+			var l1 = newT("span", divS, "", "<b>* 粘贴代码提交</b>");
+			if (canUseFile)
+			{
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+				
+				var l2 = newT("a", divS, "", "上传文件提交");
+				l2.href = "###";
+				l2.onclick = function() {
+					setDivS2();
+				};
+			}
+		}
+		function toLangDesc(lang)
+		{
+			if (lang=="CPP") return "C++ (MinGW g++ 4.7.2)";
+			if (lang=="C") return "C (MinGW gcc 4.7.2)";
+			if (lang=="C0X") return "C++0x (MinGW g++ 4.7.2 --std=c++0x)";
+			if (lang=="VC9") return "VC (Microsoft Visual C++ 2008)";
+			if (lang=="PAS") return "PAS (Free Pascal Compiler 2.4.0)";
+			if (lang=="CS") return "C# (Microsoft .NET 3.5)";
+			if (lang=="JAVA") return "Java (Java 1.7.0_15)";
+			if (lang=="RUBY") return "Ruby (Ruby 1.8.6)";
+			if (lang=="PERL") return "Perl (Perl v5.16.3)";
+			if (lang=="PYTHON") return "Python (Python 3.3.0)";
+			if (lang=="PYTHON27") return "Python (Python 2.7.3)";
+			if (lang=="PHP") return "PHP (PHP 5.4.13)";
+			return lang;
+		}
+		function setDivS2()
+		{
+			if (canUsePaste && !canUseFile)
+			{
+				setDivS1()
+				return ;
+			}
+			div.style.display = "none";
+			fdiv.style.display = "block";
+			divS.innerHTML = "";
+			if (canUsePaste)
+			{
+				var l1 = newT("a", divS, "", "粘贴代码提交");
+				l1.href = "###";
+				l1.onclick = function() {
+					setDivS1();
+				};
+				newT("span", divS, "", " &nbsp; &nbsp; &nbsp; ");
+			}
+			var l2 = newT("span", divS, "", "<b>* 上传文件提交</b>");
+			if (isSubmit)
+			{
+				newT("", divS, "", "这是一道提交答案的试题，请将<b>output*.txt</b>打包在一起后提交。");
+			}
+		}
+		var prevsubtype = getData("lastsubtype");
+		if (prevsubtype == "FILE")
+			setDivS2();
+		else
+			setDivS1();
+		
+		var _lang = newT(null, div, "smallsp", "语言选择：");
+		_langs = newT("select", _lang);
+
+		var langs = getLangs();
+		var langss = langs.split(",");
+		_langs.options.length = 0;
+		for (la in langss)
+			_langs.options.add(new Option(toLangDesc(langss[la]), langss[la]));
+
+		try {
+			var prevlang = getData("lastlang");
+			if (prevlang)
+			{
+				for (var i = 0; i < _langs.options.length; i++)
+					if (_langs.options[i].value == prevlang)
+						_langs.options[i].selected = true;
+			}
+		} catch ( errx ) {};
+
+		var _code = newT(null, div, "code");
+		var _curcode = getCode() || "";
+		var lineNum = 0;
+		if (_curcode && _curcode.indexOf("@你的代码")>=0)
+		{
+			var _scodeLines = newT("OL", _code);
+			port_fc(_curcode, function(st){ newT("LI", _scodeLines, ((++lineNum)&1)?"odd":"even", st.replace("@你的代码", "<textarea name='code' id='code' class='code' style='height:200px;width:600px;'></textarea>")); });
+		}
+		else
+			_code.innerHTML = "<textarea name='code' id='code' class='code' style='height:430px;width:660px;'></textarea>";
+		var _btns = newT("", div, "btns");
+		var _okBtn = createButton(_btns, "提交", function() {
+			var vgpid = gpid;
+			var vlang = _langs.value;
+			var vcode = e("code").value;
+			if (vcode=="")
+			{
+				alert("请输入要提交的程序。");
+				_okBtn.enableClick();
+				return true;
+			}
+			else
+			{
+				setData("lastsubtype", "CODE");
+				portxd("/test.SubmitCode.dt", {gpid:vgpid,lang:vlang,code:vcode}, function(obj){
+					setData("lastlang", vlang);
+					if (""+obj["ret"]=="1")
+					{
+						window.location.href = "/AllSubmits.page?type=a";
+					}
+					else
+					{
+						alert(obj["msg"]);
+						_okBtn.enableClick();
+					}
+				});
+			}
+			return false;
+		});
+		var _closeBtn = createButton(_btns, "关闭", function() { _pop.doHide(); });
+	}, "", function(){}, 800);
+}
+function formatChange()
+{
+	if (viewType == "f")
+	{
+		viewType = "p";
+		e("pcont1").style.display = "none";
+		e("pcont2").style.display = "block";
+		e('fcl').innerHTML = "查看格式化的试题";
+	}
+	else
+	{
+		viewType = "f";
+		e("pcont2").style.display = "none";
+		e("pcont1").style.display = "block";
+		e('fcl').innerHTML = "查看未格式化的试题";
+	}
+}
+function discussProblem() { location.href = "/Forum/Index.page?gpid=" + gpid; }
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+  	inlineMath: [ ['$'+'$','$'+'$'], ['\\(','\\)']],
+  	displayMath: [ ['\\[','\\]'] ]
+  }
+});
+</script>
+<script type="text/javascript" src="http://www.tsinsen.com/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<!-- InstanceEndEditable -->
+<!--end main-->
+</div></div>
+<iframe id="dframe" src="about:blank" style="width:1px; height:1px; visibility:hidden; border:0px; padding:0px; margin:0px;"></iframe>
+<div id="footer"><div class="content"><hr>&copy;2005-2015 胡伟栋 &nbsp; &nbsp; &nbsp; 京ICP备13041125号 &nbsp; &nbsp; &nbsp; 京公网安备11010802017621号</div></div>
+</div>
+</div>
+</body>
+<!-- InstanceEnd --></html>
