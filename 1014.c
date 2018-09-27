@@ -54,53 +54,47 @@ int rvs(char *l, int len); // reversal 反转
 int main(int argc, char const *argv[])
 {
 	int n;
-	// scanf("%d", &n);
-	n = 1;
+	scanf("%d", &n);
 
 	int i;
-	// int j;
-	char t[100000];
+	// int i, j;
+	int arr_lt = 4; // 初始数组长度
+
+	char temp[100000];
+	int temp_lt;
 
 	char **h, **o;
-	h = (char **)malloc(n * sizeof(char *));
-	o = (char **)malloc(n * sizeof(char *));
+	h = (char **)malloc(n * sizeof(char *)); // 输入库，所有输入的16进制数都作为二维数组中的一行
+	o = (char **)malloc(n * sizeof(char *)); // 输出库，8进制
 	for (i = 0; i < n; i++) {
-		h[i] = (char*)malloc(4 * sizeof(char));
-		o[i] = (char*)malloc(4 * sizeof(char));
+		h[i] = (char*)malloc(arr_lt * sizeof(char)); // 初始分配4bit
+		o[i] = (char*)malloc(arr_lt * sizeof(char));
 	}
-	// h[i] = (char*)realloc(h[i], size * sizeof(char));
-	// o[i] = (char*)realloc(o[i], size * sizeof(char));
 
 	//input
 	for (i = 0; i < n; i++) {
-		scanf("%s", t);
-		// printf("%d\n", strlen(t));
-		// scanf("%s", h[i]);
 
-		if (strlen(t) > 4) {
-			printf("ext2\n");
-			h[i] = (char*)realloc(h[i], strlen(t) * sizeof(char));
-			o[i] = (char*)realloc(o[i], strlen(t) * 3 / 2 * sizeof(char));
-			// printf("%d %d\n", strlen(t) * sizeof(char), strlen(t) * 3 / 2 * sizeof(char));
-			// printf("%d %d\n", sizeof(h[i]), sizeof(o[i]));
-		} else {
-			break;
+		/* 输入暂存数组并测量长度 */
+		scanf("%s", temp);
+		temp_lt = strlen(temp);
+		// printf("length t:%d\n", j);
+
+		while (temp_lt > arr_lt) {
+			arr_lt*=2;
+			h[i] = (char*)realloc(h[i], arr_lt * sizeof(char));
+			o[i] = (char*)realloc(o[i], arr_lt * sizeof(char));
 		}
 
-		h[i] = t;
+		h[i] = temp;
+		// printf("h[%d]=%s\n", i, h[i]);
 	}
-	//printf("%c\n", h[0][0]);
-	/*h[0]="123456789";
-	h[1]="ffffffff";
-	h[2]="11111111";*/
 
-
-	// conversion
+	/* conversion */
 	for (i = 0; i < n; i++) {
 		dco(hcd(h[i]), o[i]);
 	}
 
-	// print
+	/* print */
 	for (i = 0; i < n; i++) {
 		// printf("o[i][0]=%c\n", o[i][0]);
 		printf("%s\n", o[i]);
@@ -130,7 +124,7 @@ int hcd(char *h)
 
 int dco(int decimal, char *o)
 {
-	// printf("dco\n");
+	printf("dco:decimal=%d\n", decimal);
 	int d = decimal;
 	int i = 0;
 
@@ -146,7 +140,6 @@ int dco(int decimal, char *o)
 		}
 		rvs(o, i);
 	} else {
-		printf("one\n");
 		o[1] = '\0';
 	}
 
