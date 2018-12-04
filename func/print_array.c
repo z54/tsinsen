@@ -8,6 +8,6 @@ int print_array(int *x, int n)
 	{
 		printf("%d\t", x[i]);
 	}
-	printf("print array end\n");
+	printf("\nprint array end\n");
 	return 0;
 }

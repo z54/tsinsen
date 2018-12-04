@@ -1,29 +1,29 @@
 /*
 问题描述
+	给定n个十六进制正整数(H)，输出它们对应的八进制数(O)。
 
-       给定n个十六进制正整数(H)，输出它们对应的八进制数(O)。
 输入格式
-输入的第一行为一个正整数n （1<=n<=10）。
-接下来n行，每行一个由0~9、大写字母A~F组成的字符串，表示要转换的十六进制正整数，每个十六进制数长度不超过100000。
+	输入的第一行为一个正整数n （1<=n<=10）。
+	接下来n行，每行一个由0~9、大写字母A~F组成的字符串，表示要转换的十六进制正整数，每个十六进制数长度不超过100000。
 
 输出格式
-输出n行，每行为输入对应的八进制正整数。
+	输出n行，每行为输入对应的八进制正整数。
 
 【注意】
-输入的十六进制数不会有前导0，比如012A。
-输出的八进制数也不能有前导0。
+	输入的十六进制数不会有前导0，比如012A。
+	输出的八进制数也不能有前导0。
 
 样例输入
-2
-39
-123ABC
+	2
+	39
+	123ABC
 
 样例输出
-71
-4435274
+	71
+	4435274
 
 【提示】
-       先将十六进制数转换成某进制数，再由某进制数转换成八进制。
+    先将十六进制数转换成某进制数，再由某进制数转换成八进制。
 */
 
 /*
@@ -71,7 +71,7 @@ int main(int argc, char const *argv[])
 		o[i] = (char*)malloc(arr_lt * sizeof(char));
 	}
 
-	//input
+	/* input */
 	for (i = 0; i < n; i++) {
 
 		/* 输入暂存数组并测量长度 */
@@ -102,7 +102,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-int hcd(char *h)
+int hcd(char *h) // Hexadecimal conversion decimal
 {
 
 	int i, j;
@@ -122,7 +122,7 @@ int hcd(char *h)
 	return decimal;
 }
 
-int dco(int decimal, char *o)
+int dco(int decimal, char *o) // Decimal conversion octal
 {
 	printf("dco:decimal=%d\n", decimal);
 	int d = decimal;
