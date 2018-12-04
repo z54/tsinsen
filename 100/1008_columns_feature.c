@@ -28,7 +28,7 @@ int main(){
 		scanf ("%d", &n);
 		if (n > 0 && n < 10001)
 			break;
-}
+	}
 	
 	int l[n];//n个数的数列
 	while (1) {//输入数组判断合法性	
