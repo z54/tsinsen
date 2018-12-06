@@ -36,12 +36,13 @@ F - 17 v
 10 - 20 v
 111 - 421 v
 fff - 7777 v
-fffffff -  1777777777
-11111111 - 2104210421
+123ABC - 4435274 v
+fffffff -  1777777777 v
+11111111 - 2104210421 v
 */
 //数组realloc不成功
 
-//score:0
+//score: 100，但判分系统有毛病
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -87,12 +88,17 @@ int main(int argc, char const *argv[])
 
 		h[i] = temp;
 		// printf("h[%d]=%s\n", i, h[i]);
+		// for (j = 0; j < n; j++){
+		// 	printf("h[%d]=%s\n", j, h[j]);
+		// }
+
+		dco(hcd(h[i]), o[i]);
 	}
 
 	/* conversion */
-	for (i = 0; i < n; i++) {
-		dco(hcd(h[i]), o[i]);
-	}
+	// for (i = 0; i < n; i++) {
+	// 	dco(hcd(h[i]), o[i]);
+	// }
 
 	/* print */
 	for (i = 0; i < n; i++) {
@@ -113,7 +119,8 @@ int hcd(char *h) // Hexadecimal conversion decimal
 		if (h[i] < 65) { // 0 ~ 9 48 ~ 57 0 ~ 9
 			decimal += ((h[i] - 48) * pow(16, j));
 		} else { // A ~ F 65 ~ 70 10 ~ 15
-			decimal += ((h[i] - 87) * pow(16, j));
+			decimal += ((h[i] - 55) * pow(16, j));
+			//decimal += ((h[i] - 87) * pow(16, j));
 		}
 
 		j++;
@@ -124,7 +131,7 @@ int hcd(char *h) // Hexadecimal conversion decimal
 
 int dco(int decimal, char *o) // Decimal conversion octal
 {
-	printf("dco:decimal=%d\n", decimal);
+	// printf("dco:decimal=%d\n", decimal);
 	int d = decimal;
 	int i = 0;
 

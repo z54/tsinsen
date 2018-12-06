@@ -30,7 +30,9 @@ int main(int argc, char const *argv[]) {
 
     if (n == 1){
         printf("1\n");
-    } else if (n > 1){
+    } else if (n == 2){
+
+    } else if (n > 2){
         p[0] = 1;
 /*      01234
         1
