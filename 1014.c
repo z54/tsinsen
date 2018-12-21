@@ -39,7 +39,8 @@ fff - 7777 v
 fffffff -  1777777777
 11111111 - 2104210421
 */
-//数组realloc不成功
+
+// 二维数组赋值失败，详见90,96行，数组同样位置输出不一样
 
 //score:0
 #include <stdio.h>
@@ -58,7 +59,7 @@ int main(int argc, char const *argv[])
 
 	int i;
 	// int i, j;
-	int arr_lt = 4; // 初始数组长度
+	int arr_lt = 8; // 初始数组长度
 
 	char temp[100000];
 	int temp_lt;
@@ -67,7 +68,7 @@ int main(int argc, char const *argv[])
 	h = (char **)malloc(n * sizeof(char *)); // 输入库，所有输入的16进制数都作为二维数组中的一行
 	o = (char **)malloc(n * sizeof(char *)); // 输出库，8进制
 	for (i = 0; i < n; i++) {
-		h[i] = (char*)malloc(arr_lt * sizeof(char)); // 初始分配4bit
+		h[i] = (char*)malloc(arr_lt * sizeof(char)); // 初始分配8bit
 		o[i] = (char*)malloc(arr_lt * sizeof(char));
 	}
 
@@ -82,11 +83,17 @@ int main(int argc, char const *argv[])
 		while (temp_lt > arr_lt) {
 			arr_lt*=2;
 			h[i] = (char*)realloc(h[i], arr_lt * sizeof(char));
-			o[i] = (char*)realloc(o[i], arr_lt * sizeof(char));
+			o[i] = (char*)realloc(o[i], arr_lt * 2 * sizeof(char));
 		}
 
 		h[i] = temp;
-		// printf("h[%d]=%s\n", i, h[i]);
+		printf("input:h[%d]=%s\n", i, h[i]);
+	}
+
+	/*input check*/
+	for (i = 0; i < n; i++) {
+		// printf("o[i][0]=%c\n", o[i][0]);
+		printf("check:h[%d]%s\n", i, h[i]);
 	}
 
 	/* conversion */

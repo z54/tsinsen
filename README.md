@@ -1,5 +1,9 @@
 # tsinsen
 
+## log
+
+1014 
+
 ## Atom & gcc
 
 1. 下载Atom并安装
