@@ -1,9 +1,12 @@
 *.exe
 *.url
 *-workspace
+*.swp
+*.c~
 
 test*.*
 model.c
+a.out
 
 .git
 .vscode

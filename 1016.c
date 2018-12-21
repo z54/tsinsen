@@ -26,8 +26,8 @@ Fred做了更多的研究后发现，正在损失的陆地呈现出一个半圆�
 开方 求1/3次方，double a=pow(8,1.0/3);
 
 第一年 s=3.14*r*r/2=50 r=5.6
-第二年 	s=s+=50
-		s=3.14*r*r/2 r= 7.98
+第二年 s=s+=50
+		s=3.14*r*r/2=100 r= 7.98
 半径r变化率<1且持续减小
 
 若x，y不在x，y轴上，则弧上点r^2=x^2+y^2
@@ -42,13 +42,14 @@ Fred做了更多的研究后发现，正在损失的陆地呈现出一个半圆�
 */
 
 //score:0
+// 莫名其妙，结果已经算对，存入数组失败，输出数组失败
 #include <stdio.h>
 #include <math.h>
 
 float pour(int s)
 {
 	float r = sqrt(s * 2.0 / 3.14);
-	printf("r=%f\n", r);
+	//printf("r=%f\n", r);
 	return r;
 }
 
@@ -58,7 +59,7 @@ int cal(float x, float y)
 
 	float t = sqrt(x * x + y * y);//预定倾蚀半径
 	int s = 50;
-	printf("t=%f\n", t);
+	//printf("t=%f\n", t);
 	while (pour(s) <= t){
 		s+=50;
 		z++;
@@ -74,17 +75,16 @@ int main(int argc, char const *argv[])
 	float x, y;
 	int z;
 	scanf ("%d", &n);
-	while (n < 0){
-		scanf ("%d", &n);
-	}
+	int l[n], i = 0;
 	while (n > 0) {
 		scanf ("%f %f", &x, &y);
-		if (y < 0){
-			continue;
-		}
-		z = cal(x, y);
-		printf("%d\n", z);
-		n--;
+		l[i] = cal(x, y);
+		//printf("%d\n", l[i]);
+		//printf("%d\n", z);
+		i++, n--;
+	}
+	for (i = 0; i < n; i++){
+		printf("%d\n", l[i]);
 	}
 	
 	return 0;

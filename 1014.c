@@ -1,29 +1,29 @@
 /*
 问题描述
-       给定n个十六进制正整数(H)，输出它们对应的八进制数(O)。
+	给定n个十六进制正整数(H)，输出它们对应的八进制数(O)。
 
 输入格式
-输入的第一行为一个正整数n （1<=n<=10）。
-接下来n行，每行一个由0~9、大写字母A~F组成的字符串，表示要转换的十六进制正整数，每个十六进制数长度不超过100000。
+	输入的第一行为一个正整数n （1<=n<=10）。
+	接下来n行，每行一个由0~9、大写字母A~F组成的字符串，表示要转换的十六进制正整数，每个十六进制数长度不超过100000。
 
 输出格式
-输出n行，每行为输入对应的八进制正整数。
+	输出n行，每行为输入对应的八进制正整数。
 
 【注意】
-输入的十六进制数不会有前导0，比如012A。
-输出的八进制数也不能有前导0。
+	输入的十六进制数不会有前导0，比如012A。
+	输出的八进制数也不能有前导0。
 
 样例输入
-2
-39
-123ABC
+	2
+	39
+	123ABC
 
 样例输出
-71
-4435274
+	71
+	4435274
 
 【提示】
-       先将十六进制数转换成某进制数，再由某进制数转换成八进制。
+    先将十六进制数转换成某进制数，再由某进制数转换成八进制。
 */
 
 /*
@@ -36,13 +36,14 @@ F - 17 v
 10 - 20 v
 111 - 421 v
 fff - 7777 v
-fffffff -  1777777777
-11111111 - 2104210421
+123ABC - 4435274 v
+fffffff -  1777777777 v
+11111111 - 2104210421 v
 */
 
 // 二维数组赋值失败，详见90,96行，数组同样位置输出不一样
 
-//score:0
+//score: 100，但判分系统有毛病
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -72,7 +73,7 @@ int main(int argc, char const *argv[])
 		o[i] = (char*)malloc(arr_lt * sizeof(char));
 	}
 
-	//input
+	/* input */
 	for (i = 0; i < n; i++) {
 
 		/* 输入暂存数组并测量长度 */
@@ -87,6 +88,7 @@ int main(int argc, char const *argv[])
 		}
 
 		h[i] = temp;
+<<<<<<< HEAD
 		printf("input:h[%d]=%s\n", i, h[i]);
 	}
 
@@ -95,11 +97,20 @@ int main(int argc, char const *argv[])
 		// printf("o[i][0]=%c\n", o[i][0]);
 		printf("check:h[%d]%s\n", i, h[i]);
 	}
+=======
+		// printf("h[%d]=%s\n", i, h[i]);
+		// for (j = 0; j < n; j++){
+		// 	printf("h[%d]=%s\n", j, h[j]);
+		// }
+>>>>>>> b659b0279844fcb03f4301827ac0a57c7b01a700
 
-	/* conversion */
-	for (i = 0; i < n; i++) {
 		dco(hcd(h[i]), o[i]);
 	}
+
+	/* conversion */
+	// for (i = 0; i < n; i++) {
+	// 	dco(hcd(h[i]), o[i]);
+	// }
 
 	/* print */
 	for (i = 0; i < n; i++) {
@@ -109,7 +120,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-int hcd(char *h)
+int hcd(char *h) // Hexadecimal conversion decimal
 {
 
 	int i, j;
@@ -120,7 +131,8 @@ int hcd(char *h)
 		if (h[i] < 65) { // 0 ~ 9 48 ~ 57 0 ~ 9
 			decimal += ((h[i] - 48) * pow(16, j));
 		} else { // A ~ F 65 ~ 70 10 ~ 15
-			decimal += ((h[i] - 87) * pow(16, j));
+			decimal += ((h[i] - 55) * pow(16, j));
+			//decimal += ((h[i] - 87) * pow(16, j));
 		}
 
 		j++;
@@ -129,9 +141,9 @@ int hcd(char *h)
 	return decimal;
 }
 
-int dco(int decimal, char *o)
+int dco(int decimal, char *o) // Decimal conversion octal
 {
-	printf("dco:decimal=%d\n", decimal);
+	// printf("dco:decimal=%d\n", decimal);
 	int d = decimal;
 	int i = 0;
 
