@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
 	*/
 
 	int StartingStation, Terminalstation;
-	int TransferStation;
+	int *TransferStation;
 	int *route;
 
 	printf("输入起点站，终点站\n");
